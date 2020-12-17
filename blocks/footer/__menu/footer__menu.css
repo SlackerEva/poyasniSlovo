@@ -1,0 +1,7 @@
+.footer__menu {
+  width: 1032px;
+  margin: 0 auto;
+  display: flex;
+  list-style: none;
+  padding: 42px 0 21px 0;
+}

@@ -1,4 +1,5 @@
-.grid__menu {
+.sidebar {
+  width: 25%;
   grid-area: nav;
   list-style: none;
   padding: 0;

@@ -5,8 +5,7 @@
   this.email = email;
   this.text = text;
 }*/
-const letterTemplate = document.querySelector(".letter").content;
-const letterGrid = document.querySelector(".grid__letters");
+const letterTemplate = document.querySelector("#letter").content;
 let mailbox;
 
 const initialSenders = [{
@@ -57,6 +56,7 @@ function getRandInt(min, max) {
 
 function addLetter(id, sender, text) {
     const letterElement = letterTemplate.cloneNode(true);
+    const letterGrid = document.querySelector(".grid__letters");
     const letterSub = letterElement.querySelector(".letter__subject");
     letterSub.textContent = "Тема письма";
     letterElement.querySelector(".letter__author").textContent = sender.surname;
@@ -80,5 +80,3 @@ function loadPoems() {
     })
     .catch(error => console.log(error));
 }
-
-loadPoems();

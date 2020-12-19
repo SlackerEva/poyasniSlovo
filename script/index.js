@@ -1,11 +1,36 @@
-/*const y = document.querySelector(".grid__action-menu");
+const incoming = document.querySelector("#incoming").content;
+const dictionary = document.querySelector("#dictionary").content;
+const contentItems = document.querySelector(".content__items");
+const incomingExists= () => {return contentItems.querySelector(".incoming")};
+const dictionaryExists= () => {return contentItems.querySelector(".dictionary")};
 
-const x = (`<ul class="grid__action-menu">
-<li class="grid__action-item"><button class="grid__button">Печать</button></li>
-<li class="grid__action-item"><button class="grid__button">Удалить</button></li>
-</ul>`);
-console.log(x);
-y.childNodes.replaceWith(x);*/
+
+
+function openIncoming() {
+  const incomingClone = incoming.cloneNode(true);
+  if (incomingExists() == null) {
+    contentItems.append(incomingClone);
+    loadPoems();
+  } 
+  if (dictionaryExists() != null) {
+    dictionaryExists().remove();
+  }
+}
+
+
+function openDictionary() {
+  const dictionaryClone = dictionary.cloneNode(true);
+  if (dictionaryExists() == null) {
+    contentItems.append(dictionaryClone);
+    loadPoems();
+  } 
+  if (incomingExists() != null) {
+    incomingExists().remove();
+  }
+}
+
+openIncoming();
+//y.ChildNode.replaceWith(x);
 
 /*function addLetter() {
   const letterElement = letterTemplate.cloneNode(true);

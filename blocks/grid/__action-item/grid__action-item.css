@@ -1,0 +1,7 @@
+.grid__action-item {
+  padding-right: 32px;
+}
+
+.grid__action-item:first-child {
+  padding-left: 46px;
+}

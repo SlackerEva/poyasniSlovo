@@ -1,8 +1,13 @@
-const letterTemplate = document.querySelector(".letter").content;
-const letterGrid = document.querySelector(".grid__letters");
+/*const y = document.querySelector(".grid__action-menu");
 
+const x = (`<ul class="grid__action-menu">
+<li class="grid__action-item"><button class="grid__button">Печать</button></li>
+<li class="grid__action-item"><button class="grid__button">Удалить</button></li>
+</ul>`);
+console.log(x);
+y.childNodes.replaceWith(x);*/
 
-function addLetter() {
+/*function addLetter() {
   const letterElement = letterTemplate.cloneNode(true);
   const letterSub = letterElement.querySelector(".letter__subject");
   letterSub.textContent = "Тема письма";
@@ -17,6 +22,4 @@ function addLetersInGrid() {
     i++;
   }
 }
-addLetersInGrid();
-
-
+addLetersInGrid();*/

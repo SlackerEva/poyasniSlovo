@@ -1,11 +1,12 @@
-function Letter(id = 0, name = '', surname = '', email = '', text = '') {
+/*function Letter(id = 0, name = '', surname = '', email = '', text = '') {
   this.id = id;
   this.name = name;
   this.surname = surname;
   this.email = email;
   this.text = text;
-}
-
+}*/
+const letterTemplate = document.querySelector(".letter").content;
+const letterGrid = document.querySelector(".grid__letters");
 let mailbox;
 
 const initialSenders = [{
@@ -36,7 +37,7 @@ const initialSenders = [{
   name: 'Анастасия',
   surname: 'Панова',
   email: 'xl9bc5@gmail.com',
-},{
+}/*,{
   name: 'Михаил',
   surname: 'Беляков',
   email: 'n4zc9kz@yandex.ru',
@@ -48,14 +49,19 @@ const initialSenders = [{
   name: 'Арина',
   surname: 'Громова',
   email: 'myrfqpb@mail.ru',
-}];
+}*/];
 
 function getRandInt(min, max) {
   return Math.floor(min - (min - max -1) * Math.random());
 }
 
 function addLetter(id, sender, text) {
-  return new Letter(id, sender.name, sender.surname, sender.email, text)
+    const letterElement = letterTemplate.cloneNode(true);
+    const letterSub = letterElement.querySelector(".letter__subject");
+    letterSub.textContent = "Тема письма";
+    letterElement.querySelector(".letter__author").textContent = sender.surname;
+    letterGrid.append(letterElement); 
+  //return new Letter(id, sender.name, sender.surname, sender.email, text)
 }
 
 function initialLetters(initialSenders, proseArray) {

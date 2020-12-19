@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: repeat(8, 1fr);
-  gap: 0 180px;
+  gap: 0 80px;
 
   grid-template-areas:
   "nav buttons"

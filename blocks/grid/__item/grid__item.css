@@ -1,0 +1,14 @@
+.grid__item {
+  padding-bottom: 36px;
+}
+
+.grid__item:nth-child(3n) {
+  border-bottom: 1px solid #9a9a9a;
+}
+
+.grid__item:nth-child(4n) {
+  padding-top: 36px;
+}
+.grid__item:last-child {
+  border-bottom: none;
+}

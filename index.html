@@ -29,7 +29,26 @@
     </header>
 
     <main class="content">
-      <h1>Работы идут...</h1>
+      <h1>Мои сообщения</h1>
+      <div class="grid">            <!--Не смогла придумать нормальынй класс-->
+        <ul class="grid__menu">     <!--Стоит ли обернуть тегом нав? или так сойдет?-->
+          <li class="grid__item"><a class="grid__link" href="#">Входящие</a></li>
+          <li class="grid__item"><a class="grid__link" href="#">Исходящие</a></li>
+          <li class="grid__item"><a class="grid__link" href="#">Архив сообщений</a></li>
+          <li class="grid__item"><a class="grid__link" href="#">Черный список</a></li>
+          <li class="grid__item"><a class="grid__link" href="#">Настройки</a></li>
+          <li class="grid__item"><a class="grid__link" href="#">Словарь</a></li>
+        </ul>
+        <ul class="grid__action-menu">
+          <li class="grid__action-item"><button class="grid__button">Ответить</button></li>
+          <li class="grid__action-item"><button class="grid__button">В арихив</button></li>
+          <li class="grid__action-item"><button class="grid__button">Печать</button></li>
+          <li class="grid__action-item"><button class="grid__button">Удалить</button></li>
+        </ul>
+        <div class="grid__letters">
+
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
@@ -44,6 +63,13 @@
         <p class="footer__author">Официальный интернет-портал государтвенных услуг 2025 г.</p>
       </div>
     </footer>
+
+    <template class="letter">
+      <div  class="letter__content">
+        <p class="letter__subject"></p>
+        <p class="letter__author"></p>
+      </div>
+    </template> 
   </div>
   <script src="script/index.js"></script> 
 </body>

@@ -50,6 +50,7 @@ const initialSenders = [{
   email: 'myrfqpb@mail.ru',
 }*/];
 
+
 function getRandInt(min, max) {
   return Math.floor(min - (min - max -1) * Math.random());
 }
@@ -60,6 +61,8 @@ function addLetter(id, sender, text) {
     const letterSub = letterElement.querySelector(".letter__subject");
     letterSub.textContent = "Тема письма";
     letterElement.querySelector(".letter__author").textContent = sender.surname;
+    const letter = letterElement.querySelector(".letter");
+ //   letter.addEventListener("click", function() {openPopup()});
     letterGrid.append(letterElement); 
   //return new Letter(id, sender.name, sender.surname, sender.email, text)
 }
@@ -76,7 +79,28 @@ function loadPoems() {
     .then(respone => respone.json())
     .then(proseArray => {
       mailbox = initialLetters(initialSenders, proseArray);
-      console.log(mailbox);
+//      console.log(mailbox);
     })
     .catch(error => console.log(error));
+}
+
+
+//Уголок имитации заполнения словаря.
+
+const words = ["Яблоко", "Апельсин", "Банан", "Гранат", "Киви", "Мандарин", "Слива"];
+const wordTemplate = document.querySelector("#word").content;
+
+
+function addWords() {
+  let i = 0;
+  while (i < 7) {
+    const wordElement = wordTemplate.cloneNode(true);
+    const wordsGrid = document.querySelector(".grid__words");
+    const wordTitle = wordElement.querySelector(".word__title");
+    wordTitle.textContent = words[i];
+    const word = wordElement.querySelector(".word");
+    word.addEventListener("click", function() {openPopup()});
+    wordsGrid.append(wordElement);
+    i++;
+  }
 }

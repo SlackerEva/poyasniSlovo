@@ -1,5 +1,7 @@
 const content = document.querySelector(".content");
 const incomingMessage = document.querySelector(".sidebar__link-incoming");
+const dictionary = document.querySelector(".sidebar__link-dictionary");
+
 let mailbox;
 
 
@@ -105,7 +107,7 @@ function renderInitialSite() {
 }
 
 function clearContent() {
-  content.firstElementChild.remove();
+  content.firstElementChild.remove(); 
 }
 
 function addMailSection() {
@@ -116,19 +118,17 @@ function addMailSection() {
   setIdLetters();
   SetEventListenerMailbox();
 }
-const incoming = document.querySelector("#incoming").content;
-const dictionary = document.querySelector("#dictionary").content;
-const message = document.querySelector("#message").content;
-const contentItems = document.querySelector(".content__items");
-const popup = document.querySelector(".popup");
-let popupTitle = document.querySelector(".popup__title");
-const closeButton = document.querySelector(".popup__close");
-const incomingExists= () => {return contentItems.querySelector(".incoming")};
-const dictionaryExists= () => {return contentItems.querySelector(".dictionary")};
-const messageExists= () => {return contentItems.querySelector(".message")};
+//const incoming = document.querySelector("#incoming").content;
+//const dictionary = document.querySelector("#dictionary").content;
+//const message = document.querySelector("#message").content;
+//const contentItems = document.querySelector(".content__items");
+
+//const incomingExists= () => {return contentItems.querySelector(".incoming")};
+//const dictionaryExists= () => {return contentItems.querySelector(".dictionary")};
+//const messageExists= () => {return contentItems.querySelector(".message")};
 
 
-function openIncoming() {
+/*function openIncoming() {
   const incomingClone = incoming.cloneNode(true);
   if (incomingExists() == null) {
     contentItems.append(incomingClone);
@@ -172,11 +172,26 @@ function openMessage(sender, text, id) {
     dictionaryExists().remove();
   }
 }
+*/
+
+const popup = document.querySelector(".popup");
+let popupTitle = popup.querySelector(".card-define__word");
+const closeButton = document.querySelector(".popup__close");
 
 function openPopup(evt) {
   popup.classList.add("popup_opened");
   renderWordCard(evt);
 }
+
+function closePopup(evt) {
+  popup.classList.remove("popup_opened");
+}
+
+function renderWordCard(evt) {
+  const changeTitle = evt.target.textContent;
+  popupTitle.textContent = changeTitle;
+}
+
 
 const handlerClickLeterMailbox = (evt) => {
   openLetter(evt.target.closest('.mail__letter').id);
@@ -192,7 +207,15 @@ renderInitialSite();
 incomingMessage.addEventListener('click', (evt) => {
   evt.preventDefault();
   clearContent();
+  evt.target.classList.add("sidebar__link_active");
   addMailSection();
+})
+
+dictionary.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  clearContent();
+  evt.target.classList.add("sidebar__link_active");
+  addWords();
 })
 
 function openLetter(id) {
@@ -203,7 +226,8 @@ function openLetter(id) {
 function addLetterSection(id) {
   const letterTemplate = document.querySelector('.template-letter-open').content; 
   const letterElement = letterTemplate.cloneNode(true);
-  const letter = mailbox.filter((element) =>  {return element.id === id});
+  const letter = mailbox.filter((element) =>  {return element.id === id});// Почему ИД выглядят так id: "3letter"?????
+  const title = letterElement.querySelector('.letter__name');
   const author = letterElement.querySelector('.letter__author');
   const email = letterElement.querySelector('.letter__email');
   const text = letterElement.querySelector('.letter__text');
@@ -213,6 +237,7 @@ function addLetterSection(id) {
   const closes = letterElement.querySelector('.card-define__btn-close');
   
   author.textContent = letter[0].name + " " + letter[0].surname;
+  title.textContent = "Обращение №" + " " + letter[0].id.slice(0, 1);
   email.textContent = letter[0].email;
   text.textContent = letter[0].text;
 
@@ -276,9 +301,27 @@ function getDefineWikiSite(title) {
                   .catch(error => console.log(error)));
 }
 
-function renderWordCard(evt) {
-  const changeTitle = evt.target.textContent;
-  popupTitle.textContent = changeTitle;
+//Уголок имитации заполнения словаря.
+
+const words = ["Яблоко", "Апельсин", "Банан", "Гранат", "Киви", "Мандарин", "Слива"];
+const wordTemplate = document.querySelector("#word").content;
+
+
+function addWords() {
+  const mailTemplate = document.querySelector('.template-mail').content; 
+  const template = mailTemplate.cloneNode(true);
+  const grid = document.querySelector(".content");
+  grid.append(template);
+
+  let i = 0;
+  while (i < 7) {
+    const wordElement = wordTemplate.cloneNode(true);
+    const wordsGrid = document.querySelector(".mail__box");
+    const wordTitle = wordElement.querySelector(".word__title");
+    wordTitle.textContent = words[i];
+    const word = wordElement.querySelector(".mail__letter");//word!!
+    word.addEventListener("click", function(evt) {openPopup(evt)});
+    wordsGrid.append(wordElement);
+    i++;
+  }
 }
-
-

@@ -12,7 +12,7 @@
       <div class="intro">
         <img class="logo" src="images/header/logo.jpg" alt="Логотип">
         <figure class="avatar">
-          <img class="avatar__foto" src="images/avatar.svg" alt="Аватарка">  <!--Для аватарок же имг используют? НЕ бэе это?-->
+          <img class="avatar__foto" src="images/avatar.svg" alt="Аватарка">  <!--Для аватарок же имг используют? НЕ бэк это?-->
           <figcaption class="avatar__caption">Мария Ивановна</figcaption>
         </figure>
       </div>
@@ -30,21 +30,21 @@
 
     <main class="main">
       <h1 class="main__title">Мои сообщения</h1> 
-      <nav class="sidebar">          
-        <ul class="sidebar__list">   
-          <li class="sidebar__item"><a class="sidebar__link sidebar__link-incoming sidebar__link_active" href="#">Входящие</a></li>
+      <nav class="sidebar">
+        <ul class="sidebar__list"><!--Не критично , но можно же было сделать 1 список, зачем 2?-->
+          <li class="sidebar__item"><a class="sidebar__link sidebar__link-incoming" href="#">Входящие</a></li>
           <li class="sidebar__item"><a class="sidebar__link" href="#">Исходящие</a></li>
           <li class="sidebar__item"><a class="sidebar__link" href="#">Архив сообщений</a></li>
         </ul>
         <ul class="sidebar__list">
           <li class="sidebar__item"><a class="sidebar__link" href="#">Черный список</a></li>
           <li class="sidebar__item"><a class="sidebar__link" href="#">Настройки</a></li>
-          <li class="sidebar__item"><a class="sidebar__link" href="#">Словарь</a></li>
+          <li class="sidebar__item"><a class="sidebar__link sidebar__link-dictionary" href="#">Словарь</a></li>
         </ul>
       </nav>
       <div class="content">
         <div class="mail">
-          <nav class="mail__menu">
+          <nav class="mail__menu"><!--Почему это элемент, а не блок? Мы можем это переиспользовать-->
             <input class="mail__checkbox mail__checkbox-all" type="checkbox">
             <div class="mail__wrapper-btn">
               <button class="mail__btn" type="button">Ответить</button>
@@ -52,10 +52,10 @@
               <button class="mail__btn" type="button">Печать</button>
               <button class="mail__btn" type="button">Удалить</button>
             </div>
-            <input class="mail__search" type="text" placeholder="Поиск">
+            <input class="mail__search" type="text" placeholder="Поиск"><!--Почему это элемент, а не блок? Мы можем это переиспользовать-->
           </nav>
-          <div class="mail__box"></div>
-          <form class="mail__form" id="mailForm"></form>
+          <div class="mail__box"></div><!--зачем он грид? он и как простой блок будет работать?-->
+          <form class="mail__form" id="mailForm"></form><!--ЧТо эТО?-->
         </div>
       </div>
     </main>
@@ -73,57 +73,32 @@
       </div>
     </footer>
 
-<!--ИВАН
-  <template class="template-letter-list">
-    <a class="mail__letter" href="#">
-      <input class="mail__checkbox" type="checkbox">
-      <div class="mail__letter-header">
-        <p class="mail__letter-theme"></p>
-        <p class="mail__letter-author"></p>
-      </div>
-    </a>
-  </template>-->
-  <!--Анна
-    <div class="popup">
-      <div class="popup__head">
-        <p class="popup__title"></p>
-        <button class="popup__close" type="button"><img class="popup__img" src="images/close-button.svg" alt="Закрыть"></button>
-      </div>
-      <div class="popup__body">
-
-      </div>
-    </div>
-
-    <template id="letter">
-      <div  class="letter">
-        <p class="letter__subject"></p>
-        <p class="letter__author"></p>
-      </div>
+    <template class="template-letter-list">
+      <a class="mail__letter" href="#"><!--Почему это ссылка? Зачем это ссылка?-->
+        <input class="mail__checkbox" type="checkbox">
+        <div class="mail__letter-header">
+          <p class="mail__letter-theme"></p>
+          <p class="mail__letter-author"></p>
+        </div>
+      </a>
     </template>
-
-    <template id="word">
-      <div  class="word">
-        <p class="word__title"></p>
-        <p class="word__value"></p>
-      </div>
-    </template>-->
 
     <template class="template-letter-open">
       <div class="letter">
-        <div class="letter__title">
-          <h2 class="letter__name">Обращение № 001</h2>
-          <div class="letter__info">
+        <div class="letter__title"><!--ПОЧЕМУ ОН ТУТ?-->
+          <h2 class="letter__name"></h2>
+          <div class="letter__info"><!--Лишняя вложенность?-->
             <p class="letter__author"></p>
             <p class="letter__email"></p>
           </div>
-          <nav class="letter__menu">
+          <nav class="letter__menu"><!--Почему это элемент, а не блок? Мы можем это переиспользовать-->
             <button class="letter__btn" type="button">Ответить</button>
             <button class="letter__btn" type="button">В архив</button>
             <button class="letter__btn" type="button">Печать</button>
             <button class="letter__btn" type="button">Удалить</button>
           </nav>
         </div>
-        <p class="letter__text"></p>
+        <p class="letter__text"></p><!--ПОЧЕМУ ОН ТУТ? ПОЧЕМУ ОН НЕ ТЕМПЛЕЙТ или что то такое??? Это же переиспользуемая штука??? ПОЧЕМУУУУУУУУУУУУУУУУУУУУ??????-->
         <div class="card-define">
           <div class="card-define__header">
             <p class="card-define__word"></p>
@@ -134,7 +109,7 @@
       </div>
     </template>
     
-    <template class="template-mail">
+    <template class="template-mail"><!--ЧТО ПОЧЕМУ ЗА ЧТО?-->
       <div class="mail">
         <nav class="mail__menu">
           <input class="mail__checkbox mail__checkbox-all" type="checkbox">
@@ -147,11 +122,52 @@
           <input class="mail__search" type="text" placeholder="Поиск">
         </nav>
         <div class="mail__box"></div>
-        <form class="mail__form" id="mailForm"></form>
+        <form class="mail__form" id="mailForm"></form><!--ЧТо эТО?-->
       </div>
     </template>
 
-    <template id="message">
+    <template id="word">
+    <!--<div  class="word">-->
+      <div class="mail__letter">
+        <input class="mail__checkbox mail__checkbox-all" type="checkbox">
+        <p class="word__title"></p>
+       <!-- <p class="word__value"></p>-->
+      </div>
+    </template>
+
+      <div class="popup">
+        <div class="card-define__header">
+          <p class="card-define__word"></p>
+          <button class="card-define__btn-close" type="button" onClick="closePopup()"></button>
+        </div>
+        <p class="card-define__meaning"></p>
+ <!--       <div class="popup__head">
+          <p class="popup__title"></p>
+          <button class="popup__close" type="button"><img class="popup__img" src="images/close-button.svg" alt="Закрыть"></button>
+        </div>
+        <div class="popup__body">
+  
+        </div>-->
+      </div>
+
+  </div>
+  <script src="script/index.js"></script><!--Моими слезами можно заполнить ад-->
+</body>
+</html>
+
+  <!--Анна
+
+    <template id="letter">
+      <div  class="letter">
+        <p class="letter__subject"></p>
+        <p class="letter__author"></p>
+      </div>
+    </template>-->
+
+
+
+    <!--ВЫЯСНИТЬ АКТУАЛЬНЫЕ ЗНАЧЕНИЯ МЕНЮ И КУДА ОНИ ВЕДУТ-->
+ <!--   <template id="message">
       <div class="message grid">
         <div class="message__body">
           <h2 class="message__title"></h2>
@@ -159,16 +175,11 @@
           <p class="message__email"></p>
           <p class="message__text"></p>
         </div>         
-        <ul class="grid__action-menu">        <!--ВЫЯСНИТЬ АКТУАЛЬНЫЕ ЗНАЧЕНИЯ МЕНЮ И КУДА ОНИ ВЕДУТ-->
+        <ul class="grid__action-menu">        
           <li class="grid__action-item"><button class="grid__button">Ответить</button></li>
           <li class="grid__action-item"><button class="grid__button">В арихив</button></li>
           <li class="grid__action-item"><button class="grid__button">Печать</button></li>
           <li class="grid__action-item"><button class="grid__button">Удалить</button></li>
         </ul>
       </div>
-    </template>
-
-  </div>
-  <script src="script/index.js"></script>
-</body>
-</html>
+    </template>-->

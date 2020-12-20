@@ -57,7 +57,7 @@
 
     <div class="popup">
       <div class="popup__head">
-        <p class="popup__title">Слово</p>
+        <p class="popup__title"></p>
         <button class="popup__close" type="button"><img class="popup__img" src="images/close-button.svg" alt="Закрыть"></button>
       </div>
       <div class="popup__body">
@@ -100,6 +100,23 @@
         </ul>
         <div class="grid__words"><!--ИЗМЕНИ ЗДЕСЬ НАЗВАНИЯ КЛАССА КОГДА ПОЯВЯТСЯ СЛОВА И ПЕРЕОПРЕДЕЛИ-->
         </div>   
+      </div>
+    </template>
+
+    <template id="message">
+      <div class="message grid">
+        <div class="message__body">
+          <h2 class="message__title"></h2>
+          <p class="message__author"></p>
+          <p class="message__email"></p>
+          <p class="message__text"></p>
+        </div>         
+        <ul class="grid__action-menu">        <!--ВЫЯСНИТЬ АКТУАЛЬНЫЕ ЗНАЧЕНИЯ МЕНЮ И КУДА ОНИ ВЕДУТ-->
+          <li class="grid__action-item"><button class="grid__button">Ответить</button></li>
+          <li class="grid__action-item"><button class="grid__button">В арихив</button></li>
+          <li class="grid__action-item"><button class="grid__button">Печать</button></li>
+          <li class="grid__action-item"><button class="grid__button">Удалить</button></li>
+        </ul>
       </div>
     </template>
 

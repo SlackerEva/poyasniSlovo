@@ -1,4 +1,4 @@
-/*function Letter(id = 0, name = '', surname = '', email = '', text = '') {
+/*function letterValue(id = 0, name = '', surname = '', email = '', text = '') {
   this.id = id;
   this.name = name;
   this.surname = surname;
@@ -36,35 +36,23 @@ const initialSenders = [{
   name: 'Анастасия',
   surname: 'Панова',
   email: 'xl9bc5@gmail.com',
-}/*,{
-  name: 'Михаил',
-  surname: 'Беляков',
-  email: 'n4zc9kz@yandex.ru',
-},{
-  name: 'Максим',
-  surname: 'Казанцев',
-  email: 'copaa6@gmail.com',
-},{
-  name: 'Арина',
-  surname: 'Громова',
-  email: 'myrfqpb@mail.ru',
-}*/];
+}];
 
 
 function getRandInt(min, max) {
   return Math.floor(min - (min - max -1) * Math.random());
 }
 
-function addLetter(id, sender, text) {
+function addLetter(id, sender, text, email) {
     const letterElement = letterTemplate.cloneNode(true);
     const letterGrid = document.querySelector(".grid__letters");
     const letterSub = letterElement.querySelector(".letter__subject");
     letterSub.textContent = "Тема письма";
     letterElement.querySelector(".letter__author").textContent = sender.surname;
     const letter = letterElement.querySelector(".letter");
- //   letter.addEventListener("click", function() {openPopup()});
+    letter.addEventListener("click", function() {openMessage(sender, text, id)});
     letterGrid.append(letterElement); 
-  //return new Letter(id, sender.name, sender.surname, sender.email, text)
+  //return new letterValue(id, sender.name, sender.surname, sender.email, text)
 }
 
 function initialLetters(initialSenders, proseArray) {
@@ -99,7 +87,7 @@ function addWords() {
     const wordTitle = wordElement.querySelector(".word__title");
     wordTitle.textContent = words[i];
     const word = wordElement.querySelector(".word");
-    word.addEventListener("click", function() {openPopup()});
+    word.addEventListener("click", function(evt) {openPopup(evt)});
     wordsGrid.append(wordElement);
     i++;
   }

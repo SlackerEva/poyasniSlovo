@@ -21,7 +21,6 @@
 @import url(../blocks/grid/__action-menu/grid__action-menu.css);
 @import url(../blocks/grid/__action-item/grid__action-item.css);
 @import url(../blocks/grid/__button/grid__button.css);
-@import url(../blocks/grid/__letters/grid__letters.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__content/footer__content.css);
@@ -32,6 +31,7 @@
 
 @import url(../blocks/letter/letter.css);
 @import url(../blocks/word/word.css);
+@import url(../blocks/message/message.css);
 
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/__head/popup__head.css);

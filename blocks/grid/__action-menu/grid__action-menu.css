@@ -1,6 +1,6 @@
 .grid__action-menu {
   display: flex;
-  grid-area: buttons;
+  /*grid-area: buttons;*/
   list-style: none;
   padding-bottom: 10px;
   margin: 0;

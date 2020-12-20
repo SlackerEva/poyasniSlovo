@@ -1,0 +1,7 @@
+.mail__checkbox {
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #9A9A9A;
+  margin: 0 36px 0 0;
+}

@@ -1,0 +1,10 @@
+.sidebar {
+  max-width: 240px;
+  grid-row: 2/3;
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: min-content;
+  row-gap: 36px;
+  justify-self:start;
+  align-content: start;
+}

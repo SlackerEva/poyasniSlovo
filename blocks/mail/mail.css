@@ -1,0 +1,6 @@
+.mail {
+  justify-self: end;
+  display: grid;
+  grid-template-columns: 680px;
+  grid-template-rows: 56px 1fr;
+}

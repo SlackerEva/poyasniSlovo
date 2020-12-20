@@ -1,0 +1,5 @@
+.letter__menu {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-self: end;
+}

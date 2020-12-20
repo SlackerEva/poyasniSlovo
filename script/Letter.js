@@ -1,12 +1,15 @@
-/*function Letter(id = 0, name = '', surname = '', email = '', text = '') {
+function Letter(id = 0, name = '', surname = '', email = '', text = '', theme = 'Без темы') {
   this.id = id;
   this.name = name;
   this.surname = surname;
   this.email = email;
   this.text = text;
-}*/
+  this.theme = theme;
+}
+
 const letterTemplate = document.querySelector(".letter").content;
-const letterGrid = document.querySelector(".grid__letters");
+const letterGrid = document.querySelector(".mail__box");
+
 let mailbox;
 
 const initialSenders = [{
@@ -37,7 +40,7 @@ const initialSenders = [{
   name: 'Анастасия',
   surname: 'Панова',
   email: 'xl9bc5@gmail.com',
-}/*,{
+},{
   name: 'Михаил',
   surname: 'Беляков',
   email: 'n4zc9kz@yandex.ru',
@@ -49,24 +52,27 @@ const initialSenders = [{
   name: 'Арина',
   surname: 'Громова',
   email: 'myrfqpb@mail.ru',
-}*/];
+}];
 
 function getRandInt(min, max) {
   return Math.floor(min - (min - max -1) * Math.random());
 }
 
-function addLetter(id, sender, text) {
-    const letterElement = letterTemplate.cloneNode(true);
-    const letterSub = letterElement.querySelector(".letter__subject");
-    letterSub.textContent = "Тема письма";
-    letterElement.querySelector(".letter__author").textContent = sender.surname;
-    letterGrid.append(letterElement); 
-  //return new Letter(id, sender.name, sender.surname, sender.email, text)
+function addLetter(id, sender, text, theme) {
+  return new Letter(id, sender.name, sender.surname, sender.email, text, theme)
 }
 
 function initialLetters(initialSenders, proseArray) {
   return initialSenders.map( (sender, id) => {  let randomIntIndexProse = getRandInt(0, proseArray.length - 1);
-                                                return addLetter(id, sender, proseArray[randomIntIndexProse].fields.text); });
+                                                return addLetter(id, sender, proseArray[randomIntIndexProse].fields.text, proseArray[randomIntIndexProse].fields.name); });
+}
+
+function setLetter(theme, author) {
+  const letterElement = letterTemplate.cloneNode(true);
+  const letterSub = letterElement.querySelector(".mail__letter-theme");
+  letterSub.textContent = theme;
+  letterElement.querySelector(".mail__letter-author").textContent = author;
+  letterGrid.append(letterElement); 
 }
 
 function loadPoems() {
@@ -77,6 +83,9 @@ function loadPoems() {
     .then(proseArray => {
       mailbox = initialLetters(initialSenders, proseArray);
       console.log(mailbox);
+      mailbox.forEach( (letter, index) => {
+        if(index < 7) setLetter(letter.theme, letter.name + letter.surname);
+      });
     })
     .catch(error => console.log(error));
 }

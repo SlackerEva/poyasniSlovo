@@ -1,0 +1,12 @@
+.sidebar__list {
+  display: grid;
+  grid-template-columns: max-content;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #9A9A9A;
+}
+
+.sidebar__list:last-child {
+  border: none;
+}

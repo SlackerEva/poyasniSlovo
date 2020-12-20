@@ -1,7 +1,7 @@
 .navigation__item {
-  padding-right: 17px;
+  margin-right: 36px;
 }
 
 .navigation__item:last-child {
-  padding-right: 0;
+  margin-right: 0;
 }

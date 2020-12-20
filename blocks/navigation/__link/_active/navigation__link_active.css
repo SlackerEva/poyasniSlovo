@@ -1,0 +1,5 @@
+.navigation__link_active {
+  font-weight: 700;
+  color: #1D6CC7;
+  border-bottom: 3px solid #1D6CC7;
+}

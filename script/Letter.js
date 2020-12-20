@@ -1,4 +1,5 @@
-function Letter(id = 0, name = '', surname = '', email = '', text = '', theme = 'Без темы') {
+//function Letter(id = 0, name = '', surname = '', email = '', text = '', theme = 'Без темы') {
+/*function letterValue(id = 0, name = '', surname = '', email = '', text = '') {
   this.id = id;
   this.name = name;
   this.surname = surname;
@@ -40,27 +41,28 @@ const initialSenders = [{
   name: 'Анастасия',
   surname: 'Панова',
   email: 'xl9bc5@gmail.com',
-},{
-  name: 'Михаил',
-  surname: 'Беляков',
-  email: 'n4zc9kz@yandex.ru',
-},{
-  name: 'Максим',
-  surname: 'Казанцев',
-  email: 'copaa6@gmail.com',
-},{
-  name: 'Арина',
-  surname: 'Громова',
-  email: 'myrfqpb@mail.ru',
 }];
+
 
 function getRandInt(min, max) {
   return Math.floor(min - (min - max -1) * Math.random());
 }
 
-function addLetter(id, sender, text, theme) {
+/*function addLetter(id, sender, text, theme) {
   return new Letter(id, sender.name, sender.surname, sender.email, text, theme)
 }
+
+function addLetter(id, sender, text, email) {
+    const letterElement = letterTemplate.cloneNode(true);
+    const letterGrid = document.querySelector(".grid__letters");
+    const letterSub = letterElement.querySelector(".letter__subject");
+    letterSub.textContent = "Тема письма";
+    letterElement.querySelector(".letter__author").textContent = sender.surname;
+    const letter = letterElement.querySelector(".letter");
+    letter.addEventListener("click", function() {openMessage(sender, text, id)});
+    letterGrid.append(letterElement); 
+  //return new letterValue(id, sender.name, sender.surname, sender.email, text)
+}*/
 
 function initialLetters(initialSenders, proseArray) {
   return initialSenders.map( (sender, id) => {  let randomIntIndexProse = getRandInt(0, proseArray.length - 1);
@@ -91,3 +93,23 @@ function loadPoems() {
 }
 
 loadPoems();
+
+//Уголок имитации заполнения словаря.
+
+const words = ["Яблоко", "Апельсин", "Банан", "Гранат", "Киви", "Мандарин", "Слива"];
+const wordTemplate = document.querySelector("#word").content;
+
+
+function addWords() {
+  let i = 0;
+  while (i < 7) {
+    const wordElement = wordTemplate.cloneNode(true);
+    const wordsGrid = document.querySelector(".grid__words");
+    const wordTitle = wordElement.querySelector(".word__title");
+    wordTitle.textContent = words[i];
+    const word = wordElement.querySelector(".word");
+    word.addEventListener("click", function(evt) {openPopup(evt)});
+    wordsGrid.append(wordElement);
+    i++;
+  }
+}

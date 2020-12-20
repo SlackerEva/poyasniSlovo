@@ -1,0 +1,11 @@
+  .popup {
+  width: 328px;
+  height: 456px;
+  border: 1px solid #9a9a9a;
+  background-color: #fff;
+  padding: 24px;
+  position: absolute;
+  top: 30%;
+  left: 57%;
+  visibility: hidden;
+}

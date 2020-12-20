@@ -93,23 +93,3 @@ function loadPoems() {
 }
 
 loadPoems();
-
-//Уголок имитации заполнения словаря.
-
-const words = ["Яблоко", "Апельсин", "Банан", "Гранат", "Киви", "Мандарин", "Слива"];
-const wordTemplate = document.querySelector("#word").content;
-
-
-function addWords() {
-  let i = 0;
-  while (i < 7) {
-    const wordElement = wordTemplate.cloneNode(true);
-    const wordsGrid = document.querySelector(".grid__words");
-    const wordTitle = wordElement.querySelector(".word__title");
-    wordTitle.textContent = words[i];
-    const word = wordElement.querySelector(".word");
-    word.addEventListener("click", function(evt) {openPopup(evt)});
-    wordsGrid.append(wordElement);
-    i++;
-  }
-}

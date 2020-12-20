@@ -1,7 +1,9 @@
 .intro {
   width: 1032px;
+  min-height: 72px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 12px 0;
+  align-items: center;
+  padding: 0;
 }

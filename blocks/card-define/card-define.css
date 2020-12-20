@@ -1,0 +1,12 @@
+.card-define {
+  width: 277px;
+  border: 1px solid #9A9A9A;
+  box-sizing: border-box;
+  justify-self: end;
+  display: grid;
+  align-content: start;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content;
+  padding: 20px 28px;
+  visibility: hidden;
+}

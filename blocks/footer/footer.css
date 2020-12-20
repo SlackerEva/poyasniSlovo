@@ -1,3 +1,5 @@
 .footer {
   background-color: #e6ecec;
+  height: 100%;
+  align-self: end;
 }

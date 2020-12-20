@@ -1,4 +1,7 @@
 .letter {
-  display: flex;
-  border-bottom: 1px solid #9a9a9a;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  align-content: start;
+  align-items: start;
+  row-gap: 26px;
 }

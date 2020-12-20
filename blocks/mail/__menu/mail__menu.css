@@ -1,0 +1,10 @@
+.mail__menu {
+  box-sizing: border-box;
+  padding-bottom: 16px;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  justify-content: start;
+  margin: 0;
+  border-bottom: 1px solid #9A9A9A;
+}

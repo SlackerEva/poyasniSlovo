@@ -1,0 +1,17 @@
+.mail__letter {
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 14px 0;
+  border-bottom: 1px solid #9A9A9A;
+}
+
+.mail__letter:hover {
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+}
+
+.mail__letter:last-child {
+  margin-bottom: 20px;
+}

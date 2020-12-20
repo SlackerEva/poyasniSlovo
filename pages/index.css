@@ -1,0 +1,64 @@
+@import url(../vendor/normalize.css);
+@import url(../fonts/fonts.css);
+
+@import url(../blocks/body/body.css);
+@import url(../blocks/page/page.css);
+
+@import url(../blocks/header/header.css);
+
+@import url(../blocks/intro/intro.css);
+@import url(../blocks/logo/logo.css);
+
+@import url(../blocks/avatar/avatar.css);
+@import url(../blocks/avatar/__foto/avatar__foto.css);
+@import url(../blocks/avatar/__caption/avatar__caption.css);
+
+@import url(../blocks/navigation/navigation.css);
+@import url(../blocks/navigation/__menu/navigation__menu.css);
+@import url(../blocks/navigation/__item/navigation__item.css);
+@import url(../blocks/navigation/__link/navigation__link.css);
+@import url(../blocks/navigation/__link/_active/navigation__link_active.css);
+
+@import url(../blocks/main/main.css);
+@import url(../blocks/main/__title/main__title.css);
+
+@import url(../blocks/sidebar/sidebar.css);
+@import url(../blocks/sidebar/__list/sidebar__list.css);
+@import url(../blocks/sidebar/__item/sidebar__item.css);
+@import url(../blocks/sidebar/__link/sidebar__link.css);
+@import url(../blocks/sidebar/__link/_active/sidebar__link_active.css);
+
+@import url(../blocks/content/content.css);
+
+@import url(../blocks/letter/letter.css);
+@import url(../blocks/letter/__title/letter__title.css);
+@import url(../blocks/letter/__name/letter__name.css);
+@import url(../blocks/letter/__author/letter__author.css);
+@import url(../blocks/letter/__email/letter__email.css);
+@import url(../blocks/letter/__btn/letter__btn.css);
+@import url(../blocks/letter/__info/letter__info.css);
+@import url(../blocks/letter/__title/letter__title.css);
+
+@import url(../blocks/card-define/card-define.css);
+@import url(../blocks/card-define/__header/card-define__header.css);
+@import url(../blocks/card-define/__word/card-define__word.css);
+@import url(../blocks/card-define/__btn-close/card-define__btn-close.css);
+@import url(../blocks/card-define/__meaning/card-define__meaning.css);
+@import url(../blocks/card-define/_visible/card-define_visible.css);
+
+@import url(../blocks/mail/mail.css);
+@import url(../blocks/mail/__menu/mail__menu.css);
+@import url(../blocks/mail/__btn/mail__btn.css);
+@import url(../blocks/mail/__search/mail__search.css);
+@import url(../blocks/mail/__checkbox/mail__checkbox.css);
+@import url(../blocks/mail/__box/mail__box.css);
+@import url(../blocks/mail/__letter/mail__letter.css);
+@import url(../blocks/mail/__letter-theme/mail__letter-theme.css);
+@import url(../blocks/mail/__letter-author/mail__letter-author.css);
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__content/footer__content.css);
+@import url(../blocks/footer/__menu/footer__menu.css);
+@import url(../blocks/footer/__item/footer_item.css);
+@import url(../blocks/footer/__link/footer__link.css);
+@import url(../blocks/footer/__author/footer__author.css);

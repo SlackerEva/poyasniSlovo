@@ -1,4 +1,6 @@
 .content {
-  width: 1032px;
-  margin: 0 auto;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 1fr;
 }

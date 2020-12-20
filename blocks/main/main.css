@@ -1,0 +1,9 @@
+.main {
+  width: 1032px;
+  margin: 0 auto;
+  display: grid;
+  align-self: start;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 96px 1fr;
+  row-gap: 44px;
+}

@@ -1,0 +1,19 @@
+.mail__search {
+  box-sizing: border-box;
+  height: 100%;
+  max-width: 152px;
+  justify-self: end;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 24px;
+  border: 1px solid #9A9A9A;
+  outline: none;
+}
+
+.mail__search::placeholder {
+  color: #9A9A9A;
+}
+
+.mail__search:focus {
+  border-color: #1D6CC7;
+}

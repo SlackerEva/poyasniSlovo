@@ -1,0 +1,11 @@
+.card-define__word {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin: 0;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

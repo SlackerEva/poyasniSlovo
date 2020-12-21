@@ -1,6 +1,4 @@
-.letter__name {
-  grid-column: 1/2;
-  grid-row: 1/2;
+.message__title {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;

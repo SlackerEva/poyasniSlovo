@@ -1,7 +1,0 @@
-.letter {
-  display: grid;
-  grid-template-columns: 420px 1fr;
-  align-content: start;
-  align-items: start;
-  row-gap: 26px;
-}

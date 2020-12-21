@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src='script/render.js'></script>
   <link rel="stylesheet" href="pages/index.css">
   <title>ГосЖалоба</title>
 </head>
@@ -96,7 +97,7 @@
 
 
 
-    <template id="letter">
+    <!--<template id="letter">
       <div  class="letter">
         <p class="letter__subject"></p>
         <p class="letter__author"></p>
@@ -131,15 +132,15 @@
     
     <template class="template-mail"><!--ЧТО ПОЧЕМУ ЗА ЧТО?-->
       <div class="mail">
-        <nav class="mail__menu">
-          <input class="mail__checkbox mail__checkbox-all" type="checkbox">
+        <nav class="menu">
+          <input class="checkbox menu__checkbox-all" type="checkbox">
           <div class="mail__wrapper-btn">
-            <button class="mail__btn" type="button">Ответить</button>
-            <button class="mail__btn" type="button">В арихив</button>
-            <button class="mail__btn" type="button">Печать</button>
-            <button class="mail__btn" type="button">Удалить</button>
+            <button class="menu__btn" type="button">Ответить</button>
+            <button class="menu__btn" type="button">В арихив</button>
+            <button class="menu__btn" type="button">Печать</button>
+            <button class="menu__btn" type="button">Удалить</button>
           </div>
-          <input class="mail__search" type="text" placeholder="Поиск">
+          <input class="menu__search" type="text" placeholder="Поиск">
         </nav>
         <div class="mail__box"></div>
         <form class="mail__form" id="mailForm"></form><!--ЧТо эТО?-->

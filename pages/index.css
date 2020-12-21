@@ -2,7 +2,6 @@
 @import url(../fonts/fonts.css);
 
 @import url(../blocks/body/body.css);
-@import url(../blocks/page/page.css);
 
 @import url(../blocks/header/header.css);
 
@@ -30,15 +29,6 @@
 
 @import url(../blocks/content/content.css);
 
-@import url(../blocks/letter/letter.css);
-@import url(../blocks/letter/__title/letter__title.css);
-@import url(../blocks/letter/__name/letter__name.css);
-@import url(../blocks/letter/__author/letter__author.css);
-@import url(../blocks/letter/__email/letter__email.css);
-@import url(../blocks/letter/__btn/letter__btn.css);
-@import url(../blocks/letter/__info/letter__info.css);
-@import url(../blocks/letter/__title/letter__title.css);
-
 @import url(../blocks/card-define/card-define.css);
 @import url(../blocks/card-define/__header/card-define__header.css);
 @import url(../blocks/card-define/__word/card-define__word.css);
@@ -54,6 +44,8 @@
 @import url(../blocks/footer/__link/footer__link.css);
 @import url(../blocks/footer/__author/footer__author.css);
 
+
+
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
 
@@ -61,4 +53,20 @@
 @import url(../blocks/checkbox/checkbox.css);
 @import url(../blocks/menu/__btn/menu__btn.css);
 @import url(../blocks/menu/__search/menu__search.css);
-@import url(../blocks/letter-temp/letter-temp.css);
+@import url(../blocks/menu/__hidde/menu__hidde.css);
+
+@import url(../blocks/message/message.css);
+@import url(../blocks/message/__info/message__info.css);
+@import url(../blocks/message/__text/message__text.css);
+@import url(../blocks/message/__title/message__title.css);
+@import url(../blocks/message/__name/message__name.css);
+@import url(../blocks/message/__email/message__email.css);
+
+@import url(../blocks/link-content/link-content.css);
+@import url(../blocks/letter/__author/letter__author.css);
+@import url(../blocks/letter/__theme/letter__theme.css);
+
+
+@import url(../blocks/word/word.css);
+@import url(../blocks/word/__title/word__title.css);
+@import url(../blocks/word/__value/word__value.css);

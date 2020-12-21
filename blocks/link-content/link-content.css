@@ -1,4 +1,4 @@
-.letter-temp {
+.link-content {
   text-decoration: none;
   width: 100%;
   display: flex;
@@ -6,12 +6,13 @@
   box-sizing: border-box;
   padding: 14px 0;
   border-bottom: 1px solid #9A9A9A;
+  align-items: center;
 }
 
-.letter-temp:hover {
+.link-content:hover {
   box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
 }
 
-.letter-temp:last-child {
+.link-content:last-child {
   margin-bottom: 20px;
 }

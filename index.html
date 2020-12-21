@@ -28,7 +28,7 @@
 
     </header>
 
-    <main class="main">
+    <main class="main"><!--Вот тут плохо, надо подумать как на большой экран растягивать-->
       <h1 class="main__title">Мои сообщения</h1> 
       <nav class="sidebar">
         <ul class="sidebar__list">
@@ -41,7 +41,7 @@
         </ul>
       </nav>
       <div class="menu-place">
-
+        
       </div>
     </main>
 
@@ -60,98 +60,54 @@
 
     <template id="menu">
       <nav class="menu">
-        <input class="checkbox menu__checkbox-all" type="checkbox"><!--Что такое mail__checkbox-all-->
+        <input class="checkbox checkbox-all" type="checkbox"><!--menu__hidde для скрытия не нужных эллементов меню на разных страницах-->
         <button class="menu__btn" type="button">Ответить</button>
         <button class="menu__btn" type="button">В арихив</button>
         <button class="menu__btn" type="button">Печать</button>
         <button class="menu__btn" type="button">Удалить</button>
-        <input class="menu__search" type="text" placeholder="Поиск"><!--Почему это элемент, а не блок? Мы можем это переиспользовать-->
-      </nav>
-    </template>
-
-    <template id="menu-dictionary">
-      <nav class="menu">
-        <input class="checkbox menu__checkbox-all" type="checkbox"><!--Что такое mail__checkbox-all-->
-        <button class="menu__btn" type="button">Печать</button>
-        <button class="menu__btn" type="button">Удалить</button>
-        <input class="menu__search" type="text" placeholder="Поиск"><!--Почему это элемент, а не блок? Мы можем это переиспользовать-->
+        <input class="menu__search" type="text" placeholder="Поиск">
       </nav>
     </template>
 
     <template id="letter">
-      <a class="letter-temp" href="#"><!--Почему это ссылка? Зачем это ссылка?-->
+      <a class="link-content" href="#"><!--Оно будет работать даже если будет div, нужна ли здесь ссылки? Хотя что это если не ссылки...-->
         <input class="checkbox" type="checkbox">
-        <div class="letter-temp__header">
-          <p class="letter-temp__theme"></p>
-          <p class="letter-temp__author"></p>
+        <div class="letter">
+          <p class="letter__theme"></p>
+          <p class="letter__author"></p>
         </div>
       </a>
     </template>
 
-    <!--<div class="mail__box"></div>зачем он грид? он и как простой блок будет работать?-->
-    <!--<form class="mail__form" id="mailForm"></form>ЧТо эТО?-->
-
-
-
-
-
-
-    <template id="letter">
-      <div  class="letter">
-        <p class="letter__subject"></p>
-        <p class="letter__author"></p>
-      </div>
-    </template>-->
-
-    <template class="template-letter-open">
-      <div class="letter">
-        <div class="letter__title"><!--ПОЧЕМУ ОН ТУТ?-->
-          <h2 class="letter__name"></h2>
-          <div class="letter__info"><!--Лишняя вложенность?-->
-            <p class="letter__author"></p>
-            <p class="letter__email"></p>
-          </div>
-          <nav class="letter__menu"><!--Почему это элемент, а не блок? Мы можем это переиспользовать-->
-            <button class="letter__btn" type="button">Ответить</button>
-            <button class="letter__btn" type="button">В архив</button>
-            <button class="letter__btn" type="button">Печать</button>
-            <button class="letter__btn" type="button">Удалить</button>
-          </nav>
-        </div>
-        <p class="letter__text"></p><!--ПОЧЕМУ ОН ТУТ? ПОЧЕМУ ОН НЕ ТЕМПЛЕЙТ или что то такое??? Это же переиспользуемая штука??? ПОЧЕМУУУУУУУУУУУУУУУУУУУУ??????-->
-        <div class="card-define">
-          <div class="card-define__header">
-            <p class="card-define__word"></p>
-            <button class="card-define__btn-close" type="button"></button>
-          </div>
-          <p class="card-define__meaning"></p>
-        </div>
-      </div>
-    </template>
-    
-    <template class="template-mail"><!--ЧТО ПОЧЕМУ ЗА ЧТО?-->
-      <div class="mail">
-        <nav class="mail__menu">
-          <input class="mail__checkbox mail__checkbox-all" type="checkbox">
-          <div class="mail__wrapper-btn">
-            <button class="mail__btn" type="button">Ответить</button>
-            <button class="mail__btn" type="button">В арихив</button>
-            <button class="mail__btn" type="button">Печать</button>
-            <button class="mail__btn" type="button">Удалить</button>
-          </div>
-          <input class="mail__search" type="text" placeholder="Поиск">
-        </nav>
-        <div class="mail__box"></div>
-        <form class="mail__form" id="mailForm"></form><!--ЧТо эТО?-->
-      </div>
-    </template>
-
     <template id="word">
-    <!--<div  class="word">-->
-      <div class="mail__letter">
-        <input class="mail__checkbox mail__checkbox-all" type="checkbox">
-        <p class="word__title"></p>
-       <!-- <p class="word__value"></p>-->
+      <a class="link-content" href="#">
+        <input class="checkbox" type="checkbox">
+        <div class="word">
+          <p class="word__title"></p>
+         <p class="word__value"></p>
+        </div>
+      </a>
+    </template>
+
+    <template id="message">
+      <div class="message">
+        <div class="message__info">
+          <h3 class="message__title"></h3><!--Обращение № + id-->
+          <p class="message__name"></p>
+          <p class="message__email"></p>
+        </div>
+<!--Сюда подставлять нужное меню со скрытыми не нужными полями, надо не забыть напистаь для меню модификатор-->
+        <p class="message__text"></p>
+      </div>   
+    </template>
+
+ <!--    <template class="mes-popup">
+      <div class="card-define">
+        <div class="card-define__header">
+          <p class="card-define__word"></p>
+          <button class="card-define__btn-close" type="button"></button>
+        </div>
+        <p class="card-define__meaning"></p>
       </div>
     </template>
 
@@ -161,7 +117,7 @@
           <button class="card-define__btn-close" type="button" onClick="closePopup()"></button>
         </div>
         <p class="card-define__meaning"></p>
- <!--       <div class="popup__head">
+       <div class="popup__head">
           <p class="popup__title"></p>
           <button class="popup__close" type="button"><img class="popup__img" src="images/close-button.svg" alt="Закрыть"></button>
         </div>
@@ -174,27 +130,3 @@
   <!--<script src="script/index.js"></script>Моими слезами можно заполнить ад-->
 </body>
 </html>
-
-  <!--Анна
-
-
-
-
-
-    <!--ВЫЯСНИТЬ АКТУАЛЬНЫЕ ЗНАЧЕНИЯ МЕНЮ И КУДА ОНИ ВЕДУТ-->
- <!--   <template id="message">
-      <div class="message grid">
-        <div class="message__body">
-          <h2 class="message__title"></h2>
-          <p class="message__author"></p>
-          <p class="message__email"></p>
-          <p class="message__text"></p>
-        </div>         
-        <ul class="grid__action-menu">        
-          <li class="grid__action-item"><button class="grid__button">Ответить</button></li>
-          <li class="grid__action-item"><button class="grid__button">В арихив</button></li>
-          <li class="grid__action-item"><button class="grid__button">Печать</button></li>
-          <li class="grid__action-item"><button class="grid__button">Удалить</button></li>
-        </ul>
-      </div>
-    </template>-->

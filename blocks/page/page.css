@@ -1,9 +1,0 @@
-.page {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr min-content;
-  justify-content: center;
-  align-content: start;
-  min-height: 100vh;
-}

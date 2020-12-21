@@ -1,3 +1,11 @@
 .message {
-  display: flex;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: 55px 1fr;
+  /*align-content: start;
+  align-items: start;*/
+  gap: 26px 10px;
+  grid-template-areas:
+  "info menu"
+  "text .";
 }

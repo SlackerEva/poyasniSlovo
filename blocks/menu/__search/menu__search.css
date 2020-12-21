@@ -1,8 +1,7 @@
-.mail__search {
+.menu__search {
   box-sizing: border-box;
   height: 100%;
   max-width: 152px;
-  justify-self: end;
   padding: 12px;
   font-size: 14px;
   line-height: 24px;
@@ -10,10 +9,10 @@
   outline: none;
 }
 
-.mail__search::placeholder {
+.menu__search::placeholder {
   color: #9A9A9A;
 }
 
-.mail__search:focus {
+.menu__search:focus {
   border-color: #1D6CC7;
 }

@@ -1,4 +1,4 @@
-.mail__btn {
+.menu__btn {
   font-size: 18px;
   line-height: 24px;
   background-color: rgba(255, 255, 255, 0);
@@ -8,8 +8,4 @@
   margin: 0 32px 0 0;
   border: none;
   outline: none;
-}
-
-.mail__btn:last-of-type {
-  margin: 0;
 }

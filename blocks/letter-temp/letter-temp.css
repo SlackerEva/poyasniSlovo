@@ -1,17 +1,17 @@
-.mail__letter {
+.letter-temp {
   text-decoration: none;
   width: 100%;
+  display: flex;
+  border-bottom: 1px solid #9a9a9a;
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: auto 1fr;
   padding: 14px 0;
   border-bottom: 1px solid #9A9A9A;
 }
 
-.mail__letter:hover {
+.letter-temp:hover {
   box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
 }
 
-.mail__letter:last-child {
+.letter-temp:last-child {
   margin-bottom: 20px;
 }

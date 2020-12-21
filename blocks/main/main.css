@@ -5,5 +5,5 @@
   align-self: start;
   grid-template-columns: 240px 1fr;
   grid-template-rows: 96px 1fr;
-  row-gap: 44px;
+  gap: 44px 30px;
 }

@@ -31,32 +31,17 @@
     <main class="main">
       <h1 class="main__title">Мои сообщения</h1> 
       <nav class="sidebar">
-        <ul class="sidebar__list"><!--Не критично , но можно же было сделать 1 список, зачем 2?-->
+        <ul class="sidebar__list">
           <li class="sidebar__item"><a class="sidebar__link sidebar__link-incoming" href="#">Входящие</a></li>
           <li class="sidebar__item"><a class="sidebar__link" href="#">Исходящие</a></li>
           <li class="sidebar__item"><a class="sidebar__link" href="#">Архив сообщений</a></li>
-        </ul>
-        <ul class="sidebar__list">
           <li class="sidebar__item"><a class="sidebar__link" href="#">Черный список</a></li>
           <li class="sidebar__item"><a class="sidebar__link" href="#">Настройки</a></li>
           <li class="sidebar__item"><a class="sidebar__link sidebar__link-dictionary" href="#">Словарь</a></li>
         </ul>
       </nav>
-      <div class="content">
-        <div class="mail">
-          <nav class="mail__menu"><!--Почему это элемент, а не блок? Мы можем это переиспользовать-->
-            <input class="mail__checkbox mail__checkbox-all" type="checkbox">
-            <div class="mail__wrapper-btn">
-              <button class="mail__btn" type="button">Ответить</button>
-              <button class="mail__btn" type="button">В арихив</button>
-              <button class="mail__btn" type="button">Печать</button>
-              <button class="mail__btn" type="button">Удалить</button>
-            </div>
-            <input class="mail__search" type="text" placeholder="Поиск"><!--Почему это элемент, а не блок? Мы можем это переиспользовать-->
-          </nav>
-          <div class="mail__box"></div><!--зачем он грид? он и как простой блок будет работать?-->
-          <form class="mail__form" id="mailForm"></form><!--ЧТо эТО?-->
-        </div>
+      <div class="menu-place">
+
       </div>
     </main>
 
@@ -73,15 +58,50 @@
       </div>
     </footer>
 
-    <template class="template-letter-list">
-      <a class="mail__letter" href="#"><!--Почему это ссылка? Зачем это ссылка?-->
-        <input class="mail__checkbox" type="checkbox">
-        <div class="mail__letter-header">
-          <p class="mail__letter-theme"></p>
-          <p class="mail__letter-author"></p>
+    <template id="menu">
+      <nav class="menu">
+        <input class="checkbox menu__checkbox-all" type="checkbox"><!--Что такое mail__checkbox-all-->
+        <button class="menu__btn" type="button">Ответить</button>
+        <button class="menu__btn" type="button">В арихив</button>
+        <button class="menu__btn" type="button">Печать</button>
+        <button class="menu__btn" type="button">Удалить</button>
+        <input class="menu__search" type="text" placeholder="Поиск"><!--Почему это элемент, а не блок? Мы можем это переиспользовать-->
+      </nav>
+    </template>
+
+    <template id="menu-dictionary">
+      <nav class="menu">
+        <input class="checkbox menu__checkbox-all" type="checkbox"><!--Что такое mail__checkbox-all-->
+        <button class="menu__btn" type="button">Печать</button>
+        <button class="menu__btn" type="button">Удалить</button>
+        <input class="menu__search" type="text" placeholder="Поиск"><!--Почему это элемент, а не блок? Мы можем это переиспользовать-->
+      </nav>
+    </template>
+
+    <template id="letter">
+      <a class="letter-temp" href="#"><!--Почему это ссылка? Зачем это ссылка?-->
+        <input class="checkbox" type="checkbox">
+        <div class="letter-temp__header">
+          <p class="letter-temp__theme"></p>
+          <p class="letter-temp__author"></p>
         </div>
       </a>
     </template>
+
+    <!--<div class="mail__box"></div>зачем он грид? он и как простой блок будет работать?-->
+    <!--<form class="mail__form" id="mailForm"></form>ЧТо эТО?-->
+
+
+
+
+
+
+    <template id="letter">
+      <div  class="letter">
+        <p class="letter__subject"></p>
+        <p class="letter__author"></p>
+      </div>
+    </template>-->
 
     <template class="template-letter-open">
       <div class="letter">
@@ -151,18 +171,13 @@
       </div>
 
   </div>
-  <script src="script/index.js"></script><!--Моими слезами можно заполнить ад-->
+  <!--<script src="script/index.js"></script>Моими слезами можно заполнить ад-->
 </body>
 </html>
 
   <!--Анна
 
-    <template id="letter">
-      <div  class="letter">
-        <p class="letter__subject"></p>
-        <p class="letter__author"></p>
-      </div>
-    </template>-->
+
 
 
 

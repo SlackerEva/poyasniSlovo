@@ -1,8 +1,7 @@
-.mail__menu {
+.menu {
   box-sizing: border-box;
   padding-bottom: 16px;
-  display: grid;
-  grid-template-columns: auto auto 1fr;
+  display: flex;
   align-items: center;
   justify-content: start;
   margin: 0;

@@ -1,10 +1,8 @@
 .navigation__link {
-  display: block;
   box-sizing: border-box;
   text-decoration: none;
   font-size: 14px;
   line-height: 20px;
   margin: 0;
-  padding: 0 0 13px;
   color: #3B3B3B;
 }

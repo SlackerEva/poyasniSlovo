@@ -1,5 +1,6 @@
 .navigation__item {
   margin-right: 36px;
+  padding: 8px 0 5px;
 }
 
 .navigation__item:last-child {

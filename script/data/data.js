@@ -1,10 +1,19 @@
 export const objHtmlElements = {
   content: '.menu-place',
-  templaitMail: '.template-mail',
-  mailBox: '.mail__box',
+  templaitMenu: "#menu",
   templaitLetter: '#letter',
-  letterTheme: '.letter-temp__theme',
-  letterAuthor: '.letter-temp__author',
+  letterContent: '.letter',
+  letterTheme: '.letter__theme',
+  letterAuthor: '.letter__author',
+  checkbox: 'checkbox',
+  templaitMessage: '#message',
+  messageTitle: '.message__title',
+  messageName: '.message__name',
+  messageEmail: '.message__email',
+  messageText: '.message__text',
+  sidebar: '.sidebar',
+  sidebarLinkIncoming: '.sidebar__link-incoming',
+  sidebar__link_active: 'sidebar__link_active',
 }
 
 export const initialSenders = [{
@@ -49,4 +58,4 @@ export const initialSenders = [{
   email: 'myrfqpb@mail.ru',
 }];
 
-export const wrapperMailbox = {};
+export const mailBox = [];

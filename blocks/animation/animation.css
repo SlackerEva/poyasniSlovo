@@ -1,0 +1,11 @@
+/*animation: slider .7s ease-in;
+*/
+
+@keyframes slider {
+  0%{
+    transform: skewX(53deg) translateX(-500px);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}

@@ -2,6 +2,7 @@
 @import url(../fonts/fonts.css);
 
 @import url(../blocks/body/body.css);
+@import url(../blocks/page/page.css);
 
 @import url(../blocks/header/header.css);
 
@@ -53,7 +54,7 @@
 @import url(../blocks/checkbox/checkbox.css);
 @import url(../blocks/menu/__btn/menu__btn.css);
 @import url(../blocks/menu/__search/menu__search.css);
-@import url(../blocks/menu/__hidde/menu__hidde.css);
+@import url(../blocks/menu/_hidde/menu_hidde.css);
 
 @import url(../blocks/message/message.css);
 @import url(../blocks/message/__info/message__info.css);
@@ -70,3 +71,5 @@
 @import url(../blocks/word/word.css);
 @import url(../blocks/word/__title/word__title.css);
 @import url(../blocks/word/__value/word__value.css);
+
+@import url(../blocks/animation/animation.css);

@@ -1,0 +1,9 @@
+.footer-link_position {
+  text-align: start;
+  font-size: 14px;
+  padding-bottom: 30px;
+}
+
+.footer-link_position:last-child {
+  padding-bottom: 0;
+}

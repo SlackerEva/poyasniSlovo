@@ -2,7 +2,7 @@ export const objHtmlElements = {
   content: '.menu-place',
   templaitMenu: "#menu",
   menuSearch: '.menu__search',
-  menuHide: 'menu__hidde',
+  menuHide: 'menu_hidde',
   templaitLetter: '#letter',
   letterContent: '.letter',
   letterTheme: '.letter__theme',

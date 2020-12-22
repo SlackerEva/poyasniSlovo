@@ -20,24 +20,21 @@
 
       <nav class="navigation">
         <ul class="navigation__menu">
-          <li class="navigation__item"><a class="navigation__link" href="#">Главная</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#">Госпочта</a></li>
-          <li class="navigation__item"><a class="navigation__link navigation__link_active" href="#">Мои сообщения</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#">Словарь</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">Заявления</a></li>
+          <li class="navigation__item"><a class="navigation__link navigation__link_active" href="#">Госпочта</a></li>
         </ul>
       </nav>
 
     </header>
 
-    <main class="main"><!--Вот тут плохо, надо подумать как на большой экран растягивать-->
+    <main class="main">
       <h1 class="main__title">Мои сообщения</h1> 
       <nav class="sidebar">
         <ul class="sidebar__list">
           <li class="sidebar__item"><a class="sidebar__link sidebar__link-incoming" href="#">Входящие</a></li>
           <li class="sidebar__item"><a class="sidebar__link" href="#">Исходящие</a></li>
           <li class="sidebar__item"><a class="sidebar__link" href="#">Архив сообщений</a></li>
-          <li class="sidebar__item"><a class="sidebar__link" href="#">Черный список</a></li>
-          <li class="sidebar__item"><a class="sidebar__link" href="#">Настройки</a></li>
+          <li class="sidebar__item"><a class="sidebar__link" href="#">Удаленные сообщения</a></li>
           <li class="sidebar__item"><a class="sidebar__link sidebar__link-dictionary" href="#">Словарь</a></li>
         </ul>
       </nav>
@@ -58,6 +55,18 @@
         <p class="footer__author">Официальный интернет-портал государтвенных услуг 2025 г.</p>
       </div>
     </footer>
+
+
+    <template id="popup">
+      <div class="popup">
+        <div class="popup__header">
+          <p class="popup__title">Sыап</p>
+          <button class="popup__close" type="button"></button>
+        </div>
+        <p class="popup__meaning"></p>
+        <button>Добавить слово</button><!--Сергей когда закомитит свои изменения, применим к этой кнопке его стили-->
+      </div>
+    </template>
 
     <template id="menu">
       <nav class="menu">
@@ -80,7 +89,6 @@
       </a>
     </template>
 
-
     <template id="word">
       <a class="link-content" href="#">
         <input class="checkbox" type="checkbox">
@@ -102,33 +110,6 @@
         <p class="message__text"></p>
       </div>   
     </template>
-
- <!--    <template class="mes-popup">
-      <div class="card-define">
-        <div class="card-define__header">
-          <p class="card-define__word"></p>
-          <button class="card-define__btn-close" type="button"></button>
-        </div>
-        <p class="card-define__meaning"></p>
-      </div>
-    </template>
-
-      <div class="popup">
-        <div class="card-define__header">
-          <p class="card-define__word"></p>
-          <button class="card-define__btn-close" type="button" onClick="closePopup()"></button>
-        </div>
-        <p class="card-define__meaning"></p>
-       <div class="popup__head">
-          <p class="popup__title"></p>
-          <button class="popup__close" type="button"><img class="popup__img" src="images/close-button.svg" alt="Закрыть"></button>
-        </div>
-        <div class="popup__body">
-  
-        </div>-->
-      </div>
-
   </div>
-  <!--<script src="script/index.js"></script>Моими слезами можно заполнить ад-->
 </body>
 </html>

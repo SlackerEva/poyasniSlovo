@@ -1,11 +1,9 @@
-.card-define__btn-close {
+.popup__close {
   width: 34px;
   height: 34px;
-  background-color: rgba(255, 255, 255, 0);
   background-image: url(../../../images/card-define/Canceling.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
   border: none;
   cursor: pointer;
+  background-color: transparent;
   padding: 0;
 }

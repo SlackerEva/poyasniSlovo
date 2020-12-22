@@ -1,9 +1,0 @@
-.card-define__header {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr 40px;
-  align-items: center;
-  align-content: start;
-  border-bottom: 1px solid #9A9A9A;
-  padding-bottom: 10px;
-}

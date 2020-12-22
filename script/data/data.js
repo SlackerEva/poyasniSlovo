@@ -1,6 +1,8 @@
 export const objHtmlElements = {
   content: '.menu-place',
   templaitMenu: "#menu",
+  menuSearch: '.menu__search',
+  menuHide: 'menu_hidde',
   templaitLetter: '#letter',
   letterContent: '.letter',
   letterTheme: '.letter__theme',
@@ -13,7 +15,8 @@ export const objHtmlElements = {
   messageText: '.message__text',
   sidebar: '.sidebar',
   sidebarLinkIncoming: '.sidebar__link-incoming',
-  sidebar__link_active: 'sidebar__link_active',
+  sidebarLinkActive: 'sidebar__link_active',
+  messageInfo: '.message__info',
 }
 
 export const initialSenders = [{

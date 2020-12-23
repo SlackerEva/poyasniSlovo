@@ -63,17 +63,17 @@
           <button class="popup__close" type="button"></button>
         </div>
         <p class="popup__meaning"></p>
-        <button>Добавить слово</button><!--Сергей когда закомитит свои изменения, применим к этой кнопке его стили-->
+        <button class="popup__add">Добавить слово</button><!--Сергей когда закомитит свои изменения, применим к этой кнопке его стили-->
       </div>
     </template>
 
     <template id="menu">
       <nav class="menu">
         <input class="checkbox checkbox-all" type="checkbox"><!--menu_hidde для скрытия не нужных эллементов меню на разных страницах-->
-        <button class="menu__btn" type="button">Ответить</button>
-        <button class="menu__btn" type="button">В арихив</button>
-        <button class="menu__btn" type="button">Печать</button>
-        <button class="menu__btn" type="button">Удалить</button>
+        <button class="menu__btn menu__btn_name_answer" type="button">Ответить</button>
+        <button class="menu__btn menu__btn_name_archive" type="button">В арихив</button>
+        <button class="menu__btn menu__btn_name_print" type="button">Печать</button>
+        <button class="menu__btn menu__btn_name_delete" type="button">Удалить</button>
         <input class="menu__search" type="text" placeholder="Поиск">
       </nav>
     </template>
@@ -92,8 +92,8 @@
       <a class="link-content" href="#">
         <input class="checkbox" type="checkbox">
         <div class="word">
-          <p class="word__title"></p>
-         <p class="word__value"></p>
+          <p class="word__title">Слово</p>
+         <p class="word__value">Не воробей</p>
         </div>
       </a>
     </template>

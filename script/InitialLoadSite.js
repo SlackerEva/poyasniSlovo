@@ -1,18 +1,18 @@
-import { renderMenu, renderLetters, setContent, objHtmlElements, loadPoems, initialLetters, initialSenders, mailBox, clickHandlerSidebar } from './index.js'
+import {renderMailBox, objHtmlElements, loadPoems, initialLetters, initialSenders, mailBox, clickHandlerSidebar } from './index.js'
 
-let menuElement = renderMenu(objHtmlElements);
 const sidebar = document.querySelector(objHtmlElements.sidebar);
 const sidebarLinkIncoming = sidebar.querySelector(objHtmlElements.sidebarLinkIncoming);
-sidebarLinkIncoming.classList.add(objHtmlElements.sidebar__link_active);
+sidebarLinkIncoming.classList.add(objHtmlElements.sidebarLinkActive);
 
 loadPoems().then(poems => {
   initialSenders.map((sender, index) => {
     mailBox.push(initialLetters(index, sender, poems));
   });
-  setContent(objHtmlElements, menuElement);
-  renderLetters(objHtmlElements, mailBox);
+
+  renderMailBox(objHtmlElements);
+
   sidebar.addEventListener('click', (evt) => {
-    clickHandlerSidebar(evt, objHtmlElements, mailBox);
+    clickHandlerSidebar(evt, objHtmlElements);
   })
 });
 

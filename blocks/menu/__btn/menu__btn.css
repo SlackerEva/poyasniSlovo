@@ -9,3 +9,7 @@
   border: none;
   outline: none;
 }
+
+.menu__btn:last-of-type {
+  margin: 0;
+}

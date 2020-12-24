@@ -1,0 +1,10 @@
+.checkbox__item {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox__item:checked ~ .checkbox__checkmark {
+  background-color: #1D6CC7;
+  background-image: url("../../../images/check.svg");
+}

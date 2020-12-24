@@ -49,6 +49,8 @@
 
 @import url(../blocks/menu/menu.css);
 @import url(../blocks/checkbox/checkbox.css);
+@import url(../blocks/checkbox/__item/checkbox__item.css);
+@import url(../blocks/checkbox/__checkmark/checkbox__checkmark.css);
 @import url(../blocks/menu/__btn/menu__btn.css);
 @import url(../blocks/menu/__search/menu__search.css);
 @import url(../blocks/menu/_hidde/menu_hidde.css);
@@ -75,8 +77,9 @@
 @import url(../blocks/footer-link/__text/footer-link__text.css);
 @import url(../blocks/footer-link/__title/footer-link__title.css);
 @import url(../blocks/footer-link/__link/footer-link__link.css);
+@import url(../blocks/footer-link/__bold/footer-link__bold.css);
+@import url(../blocks/footer-link/__back/footer-link__back.css);
 @import url(../blocks/footer-link/_size/footer-link_size.css);
-@import url(../blocks/footer-link/_position/footer-link_position.css);
 
 @import url(../blocks/link_color/link_color.css);
 

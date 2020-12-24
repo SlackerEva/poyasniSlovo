@@ -1,4 +1,4 @@
-import {renderMailBox, renderDictionary} from '../index.js'
+import {renderMailBox, renderDictionary, deleteMail, archivemail} from '../index.js'
 
 export function clickHandlerSidebar(evt, objHtmlElements) {
   const sidebar = document.querySelector(objHtmlElements.sidebar);
@@ -21,5 +21,25 @@ export function clickHandlerSidebar(evt, objHtmlElements) {
     sidebarLinkDictionary.classList.add(objHtmlElements.sidebarLinkActive);
     
     renderDictionary(objHtmlElements);
+  }
+
+  if (evt.target.classList.contains(objHtmlElements.sidebarLinkDelete.slice(1))) {
+    const sidebarLinkDelete = sidebar.querySelector(objHtmlElements.sidebarLinkDelete);
+    const sidebarLinkActive = sidebar.querySelector('.' + objHtmlElements.sidebarLinkActive);
+
+    sidebarLinkActive.classList.remove(objHtmlElements.sidebarLinkActive);
+    sidebarLinkDelete.classList.add(objHtmlElements.sidebarLinkActive);
+    
+    renderMailBox(objHtmlElements, deleteMail, objHtmlElements.sidebarLinkDelete);
+  }
+
+  if (evt.target.classList.contains(objHtmlElements.sidebarLinkArchive.slice(1))) {
+    const sidebarLinkArchive = sidebar.querySelector(objHtmlElements.sidebarLinkArchive);
+    const sidebarLinkActive = sidebar.querySelector('.' + objHtmlElements.sidebarLinkActive);
+
+    sidebarLinkActive.classList.remove(objHtmlElements.sidebarLinkActive);
+    sidebarLinkArchive.classList.add(objHtmlElements.sidebarLinkActive);
+    
+    renderMailBox(objHtmlElements, archivemail, objHtmlElements.sidebarLinkArchive);
   }
 }

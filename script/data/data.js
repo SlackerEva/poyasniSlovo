@@ -5,11 +5,15 @@ export const objHtmlElements = {
   menuHide: 'menu_hidde',
   menuBtnAnswer: '.menu__btn_name_answer',
   menuBtnArchive: '.menu__btn_name_archive',
+  menuBtnDelete: '.menu__btn_name_delete',
+  menuBtnRestore: '.menu__btn_name_restore',
   templaitLetter: '#letter',
   letterContent: '.letter',
   letterTheme: '.letter__theme',
   letterAuthor: '.letter__author',
-  checkbox: 'checkbox',
+  checkboxItem: '.checkbox__item',
+  checkboxListItem: '.checkbox__list-item',
+  checkbox: '.checkbox',
   templaitMessage: '#message',
   messageTitle: '.message__title',
   messageName: '.message__name',
@@ -27,8 +31,11 @@ export const objHtmlElements = {
   sidebar: '.sidebar',
   sidebarLinkIncoming: '.sidebar__link-incoming',
   sidebarLinkDictionary: '.sidebar__link-dictionary',
+  sidebarLinkDelete: '.sidebar__link-delete',
+  sidebarLinkArchive: '.sidebar__link-archive',
   sidebarLinkActive: 'sidebar__link_active',
   messageInfo: '.message__info',
+  linkContent: '.link-content',
 }
 
 export const initialSenders = [{
@@ -75,3 +82,5 @@ export const initialSenders = [{
 
 export const mailBox = [];
 export const dictionary = [];
+export const deleteMail = [];
+export const archivemail = [];

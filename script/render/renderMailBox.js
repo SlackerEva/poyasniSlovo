@@ -1,9 +1,8 @@
 import {clearContent, setContent, renderLetters, mailBox, renderMenu} from '../index.js'
 
-export function renderMailBox(objHtmlElements) {
-  const menuElement = renderMenu(objHtmlElements);
-  
+export function renderMailBox(objHtmlElements, array = mailBox, mode = objHtmlElements.templaitLetter) {
+  const menuElement = renderMenu(objHtmlElements, mode);
   clearContent(objHtmlElements);
   setContent(objHtmlElements, menuElement);
-  renderLetters(objHtmlElements, mailBox);
+  renderLetters(objHtmlElements, array);
 }

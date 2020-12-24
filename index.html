@@ -32,8 +32,8 @@
         <ul class="sidebar__list">
           <li class="sidebar__item"><a class="sidebar__link sidebar__link-incoming" href="#">Входящие</a></li>
           <li class="sidebar__item"><a class="sidebar__link" href="#">Исходящие</a></li>
-          <li class="sidebar__item"><a class="sidebar__link" href="#">Архив сообщений</a></li>
-          <li class="sidebar__item"><a class="sidebar__link" href="#">Удаленные сообщения</a></li>
+          <li class="sidebar__item"><a class="sidebar__link sidebar__link-archive" href="#">Архив сообщений</a></li>
+          <li class="sidebar__item"><a class="sidebar__link sidebar__link-delete" href="#">Удаленные сообщения</a></li>
           <li class="sidebar__item"><a class="sidebar__link sidebar__link-dictionary" href="#">Словарь</a></li>
         </ul>
       </nav>
@@ -73,6 +73,7 @@
           <input class="checkbox__item checkbox-all" type="checkbox"><!--menu_hidde для скрытия не нужных эллементов меню на разных страницах-->
           <span class="checkbox__checkmark"></span>
         </label>
+        <button class="menu__btn menu__btn_name_restore menu_hidde" type="button">Востановить</button>
         <button class="menu__btn menu__btn_name_answer" type="button">Ответить</button>
         <button class="menu__btn menu__btn_name_archive" type="button">В арихив</button>
         <button class="menu__btn menu__btn_name_print" type="button">Печать</button>
@@ -84,7 +85,7 @@
     <template id="letter">
       <a class="link-content" href="#">
         <label class="checkbox">
-          <input class="checkbox__item" type="checkbox">
+          <input class="checkbox__item checkbox__list-item" type="checkbox">
           <span class="checkbox__checkmark"></span>
         </label>
         <div class="letter">
@@ -97,12 +98,12 @@
     <template id="word">
       <a class="link-content" href="#">
         <label class="checkbox">
-          <input class="checkbox__item" type="checkbox">
+          <input class="checkbox__item checkbox__list-item" type="checkbox">
           <span class="checkbox__checkmark"></span>
         </label>
         <div class="word">
-          <p class="word__title">Слово</p>
-         <p class="word__value">Не воробей</p>
+          <p class="word__title"></p>
+         <p class="word__value"></p>
         </div>
       </a>
     </template>

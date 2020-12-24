@@ -1,0 +1,7 @@
+.authorization {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: #F7F9F9;
+}

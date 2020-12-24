@@ -1,0 +1,9 @@
+.login__btnSubmit_inactive {
+    background: rgb(29, 108, 199);
+    opacity: .6;
+    cursor: default;
+}
+
+.login__btnSubmit_inactive {
+    opacity: .6;
+}

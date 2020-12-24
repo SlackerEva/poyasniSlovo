@@ -1,0 +1,9 @@
+.login__title {
+    margin: 30px auto;
+    max-width: 128px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 57px;
+    color: #3B3B3B;
+}

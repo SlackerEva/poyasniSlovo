@@ -1,0 +1,10 @@
+.login__pass-help {
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    color: black;
+    font-size: 12px;
+    margin: 0 auto;
+    padding-top: 16px;
+    text-align: center;
+}

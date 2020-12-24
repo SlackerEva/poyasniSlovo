@@ -53,7 +53,7 @@
 @import url(../blocks/checkbox/__checkmark/checkbox__checkmark.css);
 @import url(../blocks/menu/__btn/menu__btn.css);
 @import url(../blocks/menu/__search/menu__search.css);
-@import url(../blocks/menu/_hidde/menu_hidde.css);
+@import url(../blocks/hidde/hidde.css);
 
 @import url(../blocks/message/message.css);
 @import url(../blocks/message/__info/message__info.css);
@@ -82,6 +82,9 @@
 @import url(../blocks/footer-link/_size/footer-link_size.css);
 
 @import url(../blocks/link_color/link_color.css);
+
+@import url(../blocks/button/button.css);
+@import url(../blocks/button/_inactive/button_inactive.css);
 
 
 @import url(../blocks/animation/animation.css);

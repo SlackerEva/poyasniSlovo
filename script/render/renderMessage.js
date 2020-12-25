@@ -15,7 +15,7 @@ export function renderMessage(objHtmlElements, letter) {
   messageEmail.textContent = letter.email;
   messageText.textContent = letter.text;
 
-  const menuElement = renderMenu(objHtmlElements, objHtmlElements.templaitMessage);
+  const menuElement = renderMenu(objHtmlElements, objHtmlElements.templaitMessage, letter.id);
 
   const popupElement = renderPopup(objHtmlElements);
   const popup = popupElement.firstElementChild;
@@ -24,6 +24,13 @@ export function renderMessage(objHtmlElements, letter) {
 
   messageElement.firstElementChild.append(popupElement);
   messageInfo.after(menuElement);
+
+  if("answer" in letter) {
+    const templateAnswer = document.querySelector(objHtmlElements.templateAnswer).content;
+    const answerElement = templateAnswer.cloneNode(true);
+    answerElement.firstElementChild.textContent = letter.answer;
+    messageElement.firstElementChild.append(answerElement);
+  }
 
   messageText.addEventListener('pointerdown', (evt) => {
     console.log("Pointerdown");

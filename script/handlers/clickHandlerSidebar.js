@@ -1,4 +1,4 @@
-import {renderMailBox, renderDictionary, deleteMail, archivemail} from '../index.js'
+import {renderMailBox, renderDictionary, deleteMail, archivemail, answer} from '../index.js'
 
 export function clickHandlerSidebar(evt, objHtmlElements) {
   const sidebar = document.querySelector(objHtmlElements.sidebar);
@@ -41,5 +41,15 @@ export function clickHandlerSidebar(evt, objHtmlElements) {
     sidebarLinkArchive.classList.add(objHtmlElements.sidebarLinkActive);
     
     renderMailBox(objHtmlElements, archivemail, objHtmlElements.sidebarLinkArchive);
+  }
+
+  if (evt.target.classList.contains(objHtmlElements.sidebarLinkAnswer.slice(1))) {
+    const sidebarLinkAnswer = sidebar.querySelector(objHtmlElements.sidebarLinkAnswer);
+    const sidebarLinkActive = sidebar.querySelector('.' + objHtmlElements.sidebarLinkActive);
+
+    sidebarLinkActive.classList.remove(objHtmlElements.sidebarLinkActive);
+    sidebarLinkAnswer.classList.add(objHtmlElements.sidebarLinkActive);
+    
+    renderMailBox(objHtmlElements, answer, objHtmlElements.sidebarLinkAnswer);
   }
 }

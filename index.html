@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src='/script/redirect/redirect.js'></script>
+  <!-- <script src='/script/redirect/redirect.js'></script> -->
   <script type="module" src='/script/InitialLoadSite.js'></script>
   <link rel="stylesheet" href="pages/index.css">
   <title>ГосЖалоба</title>
@@ -15,9 +15,9 @@
       <div class="footer__content">
         <nav class="footer__navigation">
           <ul class="footer__menu">
-            <li class="footer__item"><a class="footer__link" href="#">Помощь</a></li>
-            <li class="footer__item"><a class="footer__link" href="#">Условия пользования</a></li>
-            <li class="footer__item"><a class="footer__link" href="#">Политика конфидициальности</a></li>
+            <li class="footer__item"><a class="footer__link footer__link-help" href="#">Помощь</a></li>
+            <li class="footer__item"><a class="footer__link footer__link-rule" href="#">Условия пользования</a></li>
+            <li class="footer__item"><a class="footer__link footer__link-Privacy-Policy" href="#">Политика конфидициальности</a></li>
           </ul>
         </nav>
         <p class="footer__author">Официальный интернет-портал государтвенных услуг 2025 г.</p>
@@ -36,7 +36,7 @@
         </div> 
         <nav class="navigation">
           <ul class="navigation__menu">
-            <li class="navigation__item"><a class="navigation__link" href="#">Заявления</a></li>
+            <li class="navigation__item"><a class="navigation__link navigation__link-application" href="#">Заявления</a></li>
             <li class="navigation__item navigation__item_active"><a class="navigation__link link_color" href="#">Госпочта</a></li>
           </ul>
         </nav>
@@ -49,7 +49,7 @@
         <nav class="sidebar">
           <ul class="sidebar__list">
             <li class="sidebar__item"><a class="sidebar__link sidebar__link-incoming" href="#">Входящие</a></li>
-            <li class="sidebar__item"><a class="sidebar__link" href="#">Исходящие</a></li>
+            <li class="sidebar__item"><a class="sidebar__link sidebar__link-answer" href="#">Исходящие</a></li>
             <li class="sidebar__item"><a class="sidebar__link sidebar__link-archive" href="#">Архив сообщений</a></li>
             <li class="sidebar__item"><a class="sidebar__link sidebar__link-delete" href="#">Удаленные сообщения</a></li>
             <li class="sidebar__item"><a class="sidebar__link sidebar__link-dictionary" href="#">Словарь</a></li>
@@ -78,7 +78,7 @@
           <input class="checkbox__item checkbox-all" type="checkbox"><!--menu_hidde для скрытия не нужных эллементов меню на разных страницах-->
           <span class="checkbox__checkmark"></span>
         </label>
-        <button class="menu__btn menu__btn_name_restore menu_hidde" type="button">Востановить</button>
+        <button class="menu__btn menu__btn_name_restore hidde" type="button">Востановить</button>
         <button class="menu__btn menu__btn_name_answer" type="button">Ответить</button>
         <button class="menu__btn menu__btn_name_archive" type="button">В арихив</button>
         <button class="menu__btn menu__btn_name_print" type="button">Печать</button>
@@ -133,9 +133,9 @@
       <div class="footer-link">
         <div class="footer-link__content">
           <img class="logo logo_size" src="images/gosjalobi.svg" alt="Логотип">
-          <img class="footer-link__breackImg" src="images/picError.svg" alt="Страница не доступна для использования">
-          <h2 class="footer-link__title">Что-то пошло не так. Уже чиним!</h2>
-          <p class="footer-link__back">Попробуйте обновить страницу или вы можете вернуться на <a class="footer-link__link link_color" href="#">главную</a></p><!--Нужен ли здесь спан?-->
+          <img class="footer-link__breackImg" alt="Страница не доступна для использования">
+          <h2 class="footer-link__title"></h2>
+          <p class="footer-link__back"></p><!--Нужен ли здесь спан?-->
         </div>
       </div>
     </template>

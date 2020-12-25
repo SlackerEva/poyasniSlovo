@@ -108,8 +108,8 @@ export const answer = [];
 export const errors = [
   {
     src: 'images/picError.svg',
-    title: 'Скоро эта страница будет готова для использования',
-    subtitle: 'А пока можете вернуться на <a class="footer-link__link link_color" href="#">главную</a>',
+    title: 'Что-то пошло не так. Уже чиним!',
+    subtitle: 'Попробуйте обновить страницу или вы можете вернуться на <a class="footer-link__link link_color" href="#">главную</a>',
   },
   {
     src: 'images/picMock.svg',

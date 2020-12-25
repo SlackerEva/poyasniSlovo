@@ -2,7 +2,7 @@ export const objHtmlElements = {
   content: '.menu-place',
   templaitMenu: "#menu",
   menuSearch: '.menu__search',
-  menuHide: 'menu_hidde',
+  menuHide: 'hidde',
   menuBtnAnswer: '.menu__btn_name_answer',
   menuBtnArchive: '.menu__btn_name_archive',
   menuBtnDelete: '.menu__btn_name_delete',
@@ -33,9 +33,28 @@ export const objHtmlElements = {
   sidebarLinkDictionary: '.sidebar__link-dictionary',
   sidebarLinkDelete: '.sidebar__link-delete',
   sidebarLinkArchive: '.sidebar__link-archive',
+  sidebarLinkAnswer: '.sidebar__link-answer',
   sidebarLinkActive: 'sidebar__link_active',
   messageInfo: '.message__info',
   linkContent: '.link-content',
+  templaitHeader: '#header',
+  templaitMain: '#main',
+  page: '.page',
+  footer: '.footer',
+  footerMenu: '.footer__menu',
+  footerLinkLink: '.footer-link__link',
+  footerHelp: '.footer__link-help',
+  footerRule: '.footer__link-rule',
+  footerPrivacyPolicy: '.footer__link-Privacy-Policy',
+  templaitTerms: '#terms',
+  templaitPrivacy: '#privacy',
+  logo: '.logo',
+  templaitError: '#error',
+  footerLinkBreackImg: '.footer-link__breackImg',
+  footerLinkTitle: '.footer-link__title',
+  footerLinkBack: '.footer-link__back',
+  navigationLinkApplication: '.navigation__link-application',
+  templateAnswer: '#answer',
 }
 
 export const initialSenders = [{
@@ -84,3 +103,22 @@ export const mailBox = [];
 export const dictionary = [];
 export const deleteMail = [];
 export const archivemail = [];
+export const answer = [];
+
+export const errors = [
+  {
+    src: 'images/picError.svg',
+    title: 'Что-то пошло не так. Уже чиним!',
+    subtitle: 'Попробуйте обновить страницу или вы можете вернуться на <a class="footer-link__link link_color" href="#">главную</a>',
+  },
+  {
+    src: 'images/picMock.svg',
+    title: 'Скоро эта страница будет готова для использования',
+    subtitle: 'А пока можете вернуться на <a class="footer-link__link link_color" href="#">главную</a>',
+  },
+  {
+    src: 'images/picErrorNointernet.svg',
+    title: 'Нет соединения с интернетом',
+    subtitle: 'Проверьте настройки и обновите страницу',
+  },  
+];

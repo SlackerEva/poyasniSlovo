@@ -1,20 +1,22 @@
-import {renderMailBox, objHtmlElements, loadPoems, initialLetters, initialSenders, mailBox, clickHandlerSidebar } from './index.js'
+import {objHtmlElements, loadPoems, initialLetters, initialSenders, mailBox, renderStartPage, clickHandlerFooterMenu} from './index.js'
 
-const sidebar = document.querySelector(objHtmlElements.sidebar);
-const sidebarLinkIncoming = sidebar.querySelector(objHtmlElements.sidebarLinkIncoming);
-sidebarLinkIncoming.classList.add(objHtmlElements.sidebarLinkActive);
+const footerMenu = document.querySelector(objHtmlElements.footerMenu);
 
 loadPoems().then(poems => {
   initialSenders.map((sender, index) => {
     mailBox.push(initialLetters(index, sender, poems));
   });
 
-  renderMailBox(objHtmlElements);
+  renderStartPage(objHtmlElements);
 
-  sidebar.addEventListener('click', (evt) => {
-    clickHandlerSidebar(evt, objHtmlElements);
+  footerMenu.addEventListener('click', (evt) => {
+    clickHandlerFooterMenu(evt, objHtmlElements);
   })
 });
+
+
+
+
 
 
 

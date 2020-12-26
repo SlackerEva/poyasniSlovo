@@ -1,3 +1,4 @@
+import {renderStartPage, objHtmlElements} from '../index.js'
 const email = 'MIvanova@gosjalobi.ru';
 const phone = '89123123123';
 const password = 'yandex-praktikum-best';
@@ -10,7 +11,7 @@ function enableValidation(options) {
     form.addEventListener('submit', function(evt) {
         evt.preventDefault();
         localStorage.setItem('test', 1);
-        // location.href='index.html';
+        renderStartPage(objHtmlElements);
     });
     setEventListeners(form, options);
 };
@@ -43,17 +44,17 @@ function toggleButtonState(inputList, buttonElement, options) {
         }
 };
 
-function regValidEmail(input) {
-    const val = regexEmail.test(input.value);
-}
+// function regValidEmail(input) {
+//     const val = regexEmail.test(input.value);
+// }
 
-function regValidPass(input) {
-    const inputPass = regexPass.test(input.value);
-    if(inputPass) {
-        console.log(input.value === password);
-    }
+// function regValidPass(input) {
+//     const inputPass = regexPass.test(input.value);
+//     if(inputPass) {
+//         console.log(input.value === password);
+//     }
 
-}
+// }
 
 function hasInValidInput(inputList) {    
     return inputList.some(function(input) {

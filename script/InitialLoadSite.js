@@ -7,7 +7,7 @@ loadPoems().then(poems => {
     mailBox.push(initialLetters(index, sender, poems));
   });
 
-  renderAuthorizationpage(objHtmlElements);
+  // renderAuthorizationpage(objHtmlElements);
 
   footerMenu.addEventListener('click', (evt) => {
     clickHandlerFooterMenu(evt, objHtmlElements);

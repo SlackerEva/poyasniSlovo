@@ -6,8 +6,7 @@ const regexEmail = /[a-z]{8}@gosjalobi\.ru/ig;
 const regexPhone = /^\d[\d\(\)\ -]{4,14}\d$/;
 const regexPass = /[a-z]{6}\S[a-z]{9}\S[a-z]{4}/;
 
-function enableValidation(options) {
-    const form = document.querySelector(options.formSelector);
+export function enableValidation(options, form) {
     form.addEventListener('submit', function(evt) {
         evt.preventDefault();
         localStorage.setItem('test', 1);
@@ -100,17 +99,17 @@ function hideInputError(formElement, input, options) {
 const throwPass = document.querySelector('.login__throw-pass');
 const passHelp = document.querySelector('.login__pass-help');
 
-throwPass.addEventListener('click', function() {
-    passHelp.classList.toggle('login__pass-help_active')
-})
+// throwPass.addEventListener('click', function() {
+//     passHelp.classList.toggle('login__pass-help_active')
+// })
 
-const obj = {
-    formSelector: '.login__form',
-    inputSelector: '.login__input',
-    checkboxSelector: '.login__checkbox',
-    submitButtonSelector: '.button',
-    inactiveButtonClass: 'button_inactive',
-    inputErrorClass: 'login__input_type_error',
-    errorClass: 'login__input-error_active'
-}
-enableValidation(obj);
+// const obj = {
+//     formSelector: '.login__form',
+//     inputSelector: '.login__input',
+//     checkboxSelector: '.login__checkbox',
+//     submitButtonSelector: '.button',
+//     inactiveButtonClass: 'button_inactive',
+//     inputErrorClass: 'login__input_type_error',
+//     errorClass: 'login__input-error_active'
+// }
+// enableValidation(obj);

@@ -103,7 +103,7 @@ throwPass.addEventListener('click', function() {
     passHelp.classList.toggle('login__pass-help_active')
 })
 
-obj = {
+const obj = {
     formSelector: '.login__form',
     inputSelector: '.login__input',
     checkboxSelector: '.login__checkbox',

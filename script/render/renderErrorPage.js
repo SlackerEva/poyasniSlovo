@@ -1,8 +1,8 @@
-import {getRandInt, errors, renderStartPage, clearPage} from '../index.js'
+import { getRandInt, errors, renderStartPage, clearPage, renderAuthorizationpage } from '../index.js'
 
 export function renderErrorPage(objHtmlElements) {
   const page = document.querySelector(objHtmlElements.page);
-  let randNum = getRandInt(0, errors.length-1)
+  let randNum = getRandInt(0, errors.length - 1)
   let pageError = errors[randNum];
 
   const errorTemplate = document.querySelector(objHtmlElements.templaitError).content;
@@ -18,14 +18,22 @@ export function renderErrorPage(objHtmlElements) {
   footerLinkBack.innerHTML = pageError.subtitle;
 
   const footerLinkLink = errorElement.querySelector(objHtmlElements.footerLinkLink);
-  
+
   logo.addEventListener('click', (evt) => {
-    renderStartPage(objHtmlElements)
+    if (!localStorage.getItem('test') == '1' || !localStorage.getItem('test') == null) {
+      renderAuthorizationpage(objHtmlElements);
+    } else {
+      renderStartPage(objHtmlElements);
+    }
   });
 
-  if(footerLinkLink) {
+  if (footerLinkLink) {
     footerLinkLink.addEventListener('click', (evt) => {
-      renderStartPage(objHtmlElements)
+      if (!localStorage.getItem('test') == '1' || !localStorage.getItem('test') == null) {
+        renderAuthorizationpage(objHtmlElements);
+      } else {
+        renderStartPage(objHtmlElements);
+      }
     });
   }
 

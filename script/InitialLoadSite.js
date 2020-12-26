@@ -1,4 +1,4 @@
-import {objHtmlElements, loadPoems, initialLetters, initialSenders, mailBox, renderStartPage, clickHandlerFooterMenu} from './index.js'
+import {objHtmlElements, loadPoems, initialLetters, initialSenders, mailBox, renderAuthorizationpage, clickHandlerFooterMenu} from './index.js'
 
 const footerMenu = document.querySelector(objHtmlElements.footerMenu);
 
@@ -7,7 +7,7 @@ loadPoems().then(poems => {
     mailBox.push(initialLetters(index, sender, poems));
   });
 
-  renderStartPage(objHtmlElements);
+  renderAuthorizationpage(objHtmlElements);
 
   footerMenu.addEventListener('click', (evt) => {
     clickHandlerFooterMenu(evt, objHtmlElements);

@@ -55,6 +55,7 @@ export const objHtmlElements = {
   footerLinkBack: '.footer-link__back',
   navigationLinkApplication: '.navigation__link-application',
   templateAnswer: '#answer',
+  templateLogIn: '#log-in',
 }
 
 export const initialSenders = [{

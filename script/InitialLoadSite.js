@@ -1,4 +1,4 @@
-import {objHtmlElements, loadPoems, initialLetters, initialSenders, mailBox, renderAuthorizationpage, clickHandlerFooterMenu} from './index.js'
+import {objHtmlElements, loadPoems, initialLetters, initialSenders, mailBox, renderAuthorizationpage, clickHandlerFooterMenu, renderStartPage} from './index.js'
 
 const footerMenu = document.querySelector(objHtmlElements.footerMenu);
 
@@ -7,7 +7,11 @@ loadPoems().then(poems => {
     mailBox.push(initialLetters(index, sender, poems));
   });
 
-  // renderAuthorizationpage(objHtmlElements);
+  if(!localStorage.getItem('test') == '1' || !localStorage.getItem('test') == null) {
+    renderAuthorizationpage(objHtmlElements);
+  } else {
+    renderStartPage(objHtmlElements);
+  }
 
   footerMenu.addEventListener('click', (evt) => {
     clickHandlerFooterMenu(evt, objHtmlElements);

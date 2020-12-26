@@ -17,7 +17,8 @@ export {clearContent, clearAll, clearPage, setContent} from './render/renderCont
 export {renderPopup, renderPopupAnswer} from './render/renderPopup.js';
 export {renderPageRule} from './render/renderPageRule.js';
 export {renderPagePrivacyPolicy} from './render/renderPagePrivacyPolicy.js';
-export {renderErrorPage} from './render/renderErrorPage.js'
+export {renderErrorPage} from './render/renderErrorPage.js';
+export {renderAuthorizationpage} from './render/renderAuthorizationpage.js';
 
 export {clickHandlerLetter} from './handlers/clickHandlerLetter.js';
 export {clickHandlerSidebar, arrayTarget} from './handlers/clickHandlerSidebar.js';

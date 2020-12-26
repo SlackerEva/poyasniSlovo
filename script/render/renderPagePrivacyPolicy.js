@@ -1,4 +1,4 @@
-import {clearPage, renderStartPage} from '../index.js'
+import {clearPage, renderStartPage, renderAuthorizationpage} from '../index.js'
 
 export function renderPagePrivacyPolicy(objHtmlElements) {
   const page = document.querySelector(objHtmlElements.page);
@@ -9,11 +9,19 @@ export function renderPagePrivacyPolicy(objHtmlElements) {
   const footerLinkLink = privacyElement.querySelector(objHtmlElements.footerLinkLink);
 
   logo.addEventListener('click', (evt) => {
-    renderStartPage(objHtmlElements)
+    if (!localStorage.getItem('test') == '1' || !localStorage.getItem('test') == null) {
+      renderAuthorizationpage(objHtmlElements);
+    } else {
+      renderStartPage(objHtmlElements);
+    }
   });
 
   footerLinkLink.addEventListener('click', (evt) => {
-    renderStartPage(objHtmlElements)
+    if (!localStorage.getItem('test') == '1' || !localStorage.getItem('test') == null) {
+      renderAuthorizationpage(objHtmlElements);
+    } else {
+      renderStartPage(objHtmlElements);
+    }
   });
 
   clearPage(objHtmlElements);

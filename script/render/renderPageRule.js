@@ -1,4 +1,4 @@
-import {clearPage, renderStartPage} from '../index.js'
+import {clearPage, renderStartPage, renderAuthorizationpage} from '../index.js'
 
 export function renderPageRule(objHtmlElements) {
   const page = document.querySelector(objHtmlElements.page);
@@ -8,7 +8,11 @@ export function renderPageRule(objHtmlElements) {
   const logo = termsElement.querySelector(objHtmlElements.logo);
 
   logo.addEventListener('click', (evt) => {
-    renderStartPage(objHtmlElements)
+    if (!localStorage.getItem('test') == '1' || !localStorage.getItem('test') == null) {
+      renderAuthorizationpage(objHtmlElements);
+    } else {
+      renderStartPage(objHtmlElements);
+    }
   });
 
   clearPage(objHtmlElements);

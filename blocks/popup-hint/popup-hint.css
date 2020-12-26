@@ -1,0 +1,11 @@
+.popup-hint {
+  width: 295px;
+  height: 265px;
+  padding: 24px;
+  position: fixed;
+  box-sizing: border-box;
+  top: 26%;
+  left: 42%;
+  display: grid;
+  grid-template-rows: 34px auto;
+}

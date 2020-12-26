@@ -1,0 +1,12 @@
+.popup__message-meaning {
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  margin-bottom: 24px;
+  padding: 24px 0 24px;
+  max-height: 290px;
+  overflow-y: auto;
+  border-top: 1px solid #9a9a9a;
+  border-bottom: 1px solid #9a9a9a;
+}

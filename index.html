@@ -65,26 +65,26 @@
     <template id="popup">
       <div class="popup">
         <div class="popup__header">
-          <p class="popup__title">Sыап</p>
+          <p class="popup__title"></p>
           <button class="popup__close" type="button"></button>
         </div>
         <p class="popup__meaning"></p>
-        <button class="button popup__add"></button><!--У кнопок теперь общий стиль -->
+        <button class="button button_position popup__add"></button><!--У кнопок теперь общий стиль -->
       </div>
     </template>
 
     <template id="popup-answer">
       <div class="popup popup-answer">
         <div class="popup__header">
-          <p class="popup__title">Sыап</p>
+          <p class="popup__title"></p>
           <button class="popup__close" type="button"></button>
         </div>
         <div class="popup__data">
           <p class="popup__message-title"></p>
-          <p class="popup__message-email"></p>
+          <p class="popup__message-email"><span class="popup__message-email_bold"></span></p>
         </div>
-        <p class="popup__meaning"></p>
-        <button class="button popup__add"></button><!--У кнопок теперь общий стиль -->
+        <p class="popup__message-meaning"></p>
+        <button class="button button_position popup__add"></button><!--У кнопок теперь общий стиль -->
       </div>
     </template>
 
@@ -96,7 +96,7 @@
         </label>
         <button class="menu__btn menu__btn_name_restore hidde" type="button">Востановить</button>
         <button class="menu__btn menu__btn_name_answer" type="button">Ответить</button>
-        <button class="menu__btn menu__btn_name_archive" type="button">В арихив</button>
+        <button class="menu__btn menu__btn_name_archive" type="button">В архив</button>
         <button class="menu__btn menu__btn_name_print" type="button">Печать</button>
         <button class="menu__btn menu__btn_name_delete" type="button">Удалить</button>
         <input class="menu__search" type="text" placeholder="Поиск">
@@ -152,17 +152,6 @@
           <img class="footer-link__breackImg" alt="Страница не доступна для использования">
           <h2 class="footer-link__title"></h2>
           <p class="footer-link__back"></p><!--Нужен ли здесь спан?-->
-        </div>
-      </div>
-    </template>
-
-    <template id="help">
-      <div class="footer-link">
-        <div class="footer-link__content">
-          <img class="logo logo_size" src="images/gosjalobi.svg" alt="Логотип">
-          <img class="footer-link__breackImg" src="images/picMock.svg" alt="Страница не доступна для использования">
-          <h2 class="footer-link__title">Скоро эта страница будет готова для использования</h2>
-          <p class="footer-link__back">А пока можете вернуться на <a class="footer-link__link link_color" href="#">главную</a></p><!--Нужен ли здесь спан?-->
         </div>
       </div>
     </template>

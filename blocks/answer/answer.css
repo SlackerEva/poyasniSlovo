@@ -1,0 +1,11 @@
+.answer {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 16px 0;
+  font-weight: 400;
+  color: #9A9A9A;
+  font-size: 12px;
+  line-height: 24px;
+  border-top:  1px solid #9A9A9A;
+  grid-area: answer;
+}

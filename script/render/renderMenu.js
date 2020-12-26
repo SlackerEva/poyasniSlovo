@@ -1,4 +1,4 @@
-import { answer, mailBox, inputHandlerMenu, dictionary, renderLetters, renderWords, clickHandlerMenuCheckbox, clickHandlerMenuBtn, deleteMail, archivemail, swapElementArray, clickHandlerMenuBtnAnswer} from '../index.js'
+import {clickHundlerBtnAnswer, swapElementRestore, answer, mailBox, inputHandlerMenu, dictionary, renderLetters, renderWords, clickHandlerMenuCheckbox, clickHandlerMenuBtn, deleteMail, archivemail, swapElementArray, clickHandlerMenuBtnAnswer, clickHandlerMenuBtnmenuBtnRestore} from '../index.js'
 
 export function renderMenu(objHtmlElements, mode = '', id = '') {
   const menuTemplate = document.querySelector(objHtmlElements.templaitMenu).content;
@@ -48,6 +48,10 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
       menuBtnArchive.addEventListener('click', (evt) => {
         swapElementArray(mailBox, archivemail, id);
       });
+
+      menuBtnAnswer.addEventListener('click', (evt) => {
+        clickHundlerBtnAnswer(evt, mailBox, id);
+      });
     }
 
     if(sidebarLinkActive.classList.contains(objHtmlElements.sidebarLinkArchive.slice(1))) {
@@ -55,6 +59,10 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
 
       menuBtnDelete.addEventListener('click', (evt) => {
         swapElementArray(archivemail, deleteMail, id);
+      });
+
+      menuBtnAnswer.addEventListener('click', (evt) => {
+        clickHundlerBtnAnswer(evt, archivemail, id);
       });
     }
 
@@ -65,11 +73,27 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
       menuBtnRestore.classList.remove(objHtmlElements.menuHide);
 
       menuBtnRestore.addEventListener('click', (evt) => {
-        swapElementArray(deleteMail, mailBox, id);
+        swapElementRestore(deleteMail, id);
       });
   
       menuBtnArchive.addEventListener('click', (evt) => {
         swapElementArray(deleteMail, archivemail, id);
+      });
+
+      menuBtnAnswer.addEventListener('click', (evt) => {
+        clickHundlerBtnAnswer(evt, deleteMail, id);
+      });
+    }
+
+    if(sidebarLinkActive.classList.contains(objHtmlElements.sidebarLinkAnswer.slice(1))) {
+      menuBtnAnswer.classList.add(objHtmlElements.menuHide);
+
+      menuBtnDelete.addEventListener('click', (evt) => {
+        swapElementArray(answer, deleteMail, id);
+      });
+
+      menuBtnArchive.addEventListener('click', (evt) => {
+        swapElementArray(answer, archivemail, id);
       });
     }
   }
@@ -96,12 +120,32 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
     });
 
     menuBtnRestore.addEventListener('click', (evt) => {
-      clickHandlerMenuBtn(evt, objHtmlElements, deleteMail, mailBox);
+      clickHandlerMenuBtnmenuBtnRestore(evt, objHtmlElements, deleteMail);
     });
 
     menuBtnArchive.addEventListener('click', (evt) => {
       clickHandlerMenuBtn(evt, objHtmlElements, deleteMail, archivemail);
     });
+
+    menuBtnAnswer.addEventListener('click', (evt) => {
+      clickHandlerMenuBtnAnswer(evt, objHtmlElements, deleteMail, answer);
+    });
+  }
+
+  if (mode === objHtmlElements.sidebarLinkAnswer) {
+    menuSearch.addEventListener('input', (evt) => {
+      inputHandlerMenu(objHtmlElements, answer, menuSearch, 'theme', renderLetters);
+    });
+
+    menuBtnArchive.addEventListener('click', (evt) => {
+      clickHandlerMenuBtn(evt, objHtmlElements, answer, archivemail);
+    });
+
+    menuBtnDelete.addEventListener('click', (evt) => {
+      clickHandlerMenuBtn(evt, objHtmlElements, answer, deleteMail);
+    });
+
+    menuBtnAnswer.classList.add(objHtmlElements.menuHide);
   }
 
   if (mode === objHtmlElements.sidebarLinkArchive) {
@@ -111,10 +155,12 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
       inputHandlerMenu(objHtmlElements, archivemail, menuSearch, 'theme', renderLetters);
     });
 
-    
-
     menuBtnDelete.addEventListener('click', (evt) => {
       clickHandlerMenuBtn(evt, objHtmlElements, archivemail, deleteMail);
+    });
+
+    menuBtnAnswer.addEventListener('click', (evt) => {
+      clickHandlerMenuBtnAnswer(evt, objHtmlElements, archivemail, answer);
     });
   }
   return menuElement;

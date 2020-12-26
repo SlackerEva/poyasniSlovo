@@ -1,4 +1,6 @@
-import {renderMailBox, renderDictionary, deleteMail, archivemail, answer} from '../index.js'
+import {renderMailBox, renderDictionary, deleteMail, archivemail, answer, mailBox} from '../index.js'
+
+export let arrayTarget = mailBox;
 
 export function clickHandlerSidebar(evt, objHtmlElements) {
   const sidebar = document.querySelector(objHtmlElements.sidebar);
@@ -9,7 +11,7 @@ export function clickHandlerSidebar(evt, objHtmlElements) {
 
     sidebarLinkActive.classList.remove(objHtmlElements.sidebarLinkActive);
     sidebarLinkIncoming.classList.add(objHtmlElements.sidebarLinkActive);
-
+    arrayTarget = mailBox;
     renderMailBox(objHtmlElements);
   }
 
@@ -29,7 +31,7 @@ export function clickHandlerSidebar(evt, objHtmlElements) {
 
     sidebarLinkActive.classList.remove(objHtmlElements.sidebarLinkActive);
     sidebarLinkDelete.classList.add(objHtmlElements.sidebarLinkActive);
-    
+    arrayTarget = deleteMail;
     renderMailBox(objHtmlElements, deleteMail, objHtmlElements.sidebarLinkDelete);
   }
 
@@ -39,7 +41,7 @@ export function clickHandlerSidebar(evt, objHtmlElements) {
 
     sidebarLinkActive.classList.remove(objHtmlElements.sidebarLinkActive);
     sidebarLinkArchive.classList.add(objHtmlElements.sidebarLinkActive);
-    
+    arrayTarget = archivemail;
     renderMailBox(objHtmlElements, archivemail, objHtmlElements.sidebarLinkArchive);
   }
 
@@ -49,7 +51,7 @@ export function clickHandlerSidebar(evt, objHtmlElements) {
 
     sidebarLinkActive.classList.remove(objHtmlElements.sidebarLinkActive);
     sidebarLinkAnswer.classList.add(objHtmlElements.sidebarLinkActive);
-    
+    arrayTarget = answer;
     renderMailBox(objHtmlElements, answer, objHtmlElements.sidebarLinkAnswer);
   }
 }

@@ -1,4 +1,4 @@
-import { clearAll, renderLetters, poems, getRandInt} from '../index.js'
+import { clearAll, renderLetters, poems, getRandInt, mailBox, answer} from '../index.js'
 
 export function clickHandlerMenuBtn(evt, objHtmlElements, letters, deleteLetters, render = renderLetters) {
   const content = document.querySelector(objHtmlElements.content);
@@ -41,10 +41,37 @@ export function clickHandlerMenuBtnAnswer(evt, objHtmlElements, letters, deleteL
     index++;
     if(index == letters.length) break;
   }
-  console.log(deleteLetters);
   clearAll(objHtmlElements.content, objHtmlElements.linkContent);
   render(objHtmlElements, letters);
 }
+
+export function clickHandlerMenuBtnmenuBtnRestore(evt, objHtmlElements, letters, render = renderLetters) {
+  const content = document.querySelector(objHtmlElements.content);
+  const menuCheckBoxArray = Array.from(content.querySelectorAll(objHtmlElements.checkboxListItem));
+  const menuCheckBoxArrayChecked = menuCheckBoxArray.filter(element => element.checked);
+  const menuCheckBoxArrayId = menuCheckBoxArrayChecked.map(element => +element.value);
+
+  let index = 0;
+
+  while(letters.length) {
+    if (menuCheckBoxArrayId.includes(letters[index].id)) {
+      if("answer" in letters[index]) {
+        answer.push(letters[index]);
+      } else {
+        mailBox.push(letters[index]);
+      }
+      letters.splice(index, 1);
+      index--;
+    }
+    index++;
+    if(index == letters.length) break;
+  }
+
+  clearAll(objHtmlElements.content, objHtmlElements.linkContent);
+  render(objHtmlElements, letters);
+}
+
+
 
 export function clickHandlerMenuCheckbox(objHtmlElements, menuCheckboxAll) {
   const content = document.querySelector(objHtmlElements.content);

@@ -1,9 +1,8 @@
-import { renderMenu, renderPopup, getSearchListDefineWords, getDefineWikiSite, getDefine } from '../index.js'
+import { renderMenu, renderPopup, getSearchListDefineWords, getDefineWikiSite, getDefine, renderPopupAnswer, arrayTarget} from '../index.js'
 // Сделать рефакторинг
 export function renderMessage(objHtmlElements, letter) {
   const messageTemplate = document.querySelector(objHtmlElements.templaitMessage).content;
   const messageElement = messageTemplate.cloneNode(true);
-
   const messageTitle = messageElement.querySelector(objHtmlElements.messageTitle);
   const messageName = messageElement.querySelector(objHtmlElements.messageName);
   const messageEmail = messageElement.querySelector(objHtmlElements.messageEmail);
@@ -21,8 +20,14 @@ export function renderMessage(objHtmlElements, letter) {
   const popup = popupElement.firstElementChild;
   const popupTitle = popup.querySelector(objHtmlElements.popupTitle);
   const popupMeaning = popup.querySelector(objHtmlElements.popupMeaning);
+  console.log(arrayTarget);
+  const PopupAnswerElement = renderPopupAnswer(objHtmlElements, arrayTarget, letter.id);
 
   messageElement.firstElementChild.append(popupElement);
+  messageElement.firstElementChild.append(PopupAnswerElement);
+
+
+
   messageInfo.after(menuElement);
 
   if("answer" in letter) {

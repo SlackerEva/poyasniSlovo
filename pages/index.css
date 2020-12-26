@@ -90,3 +90,22 @@
 
 
 @import url(../blocks/animation/animation.css);
+
+@import url(../blocks/authorization/authorization.css);
+@import url(../blocks/logo/_authorization/logo_authorization.css);
+
+
+@import url(../blocks/login/login.css);
+@import url(../blocks/login/__title/login__title.css);
+@import url(../blocks/login/__form/login__form.css);
+@import url(../blocks/login/__input/login__input.css);
+@import url(../blocks/login/__label/login__label.css);
+@import url(../blocks/login/__label/_text/login__label_text.css);
+@import url(../blocks/login/__checkbox/login__checkbox.css);
+@import url(../blocks/button/_inactive/button_inactive.css);
+@import url(../blocks/login/__throw-pass/login__throw-pass.css);
+@import url(../blocks/login/__input-error/login__input-error.css);
+@import url(../blocks/login/__input-error/_active/login__input-error_active.css);
+@import url(../blocks/login/__input/_type_error/login__input_type_error.css);
+@import url(../blocks/login/__pass-help/login__pass-help.css);
+@import url(../blocks/login/__pass-help/_active/login__pass-help_active.css);

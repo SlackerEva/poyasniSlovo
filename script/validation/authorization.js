@@ -10,7 +10,7 @@ function enableValidation(options) {
     form.addEventListener('submit', function(evt) {
         evt.preventDefault();
         localStorage.setItem('test', 1);
-        location.href='index.html';
+        // location.href='index.html';
     });
     setEventListeners(form, options);
 };
@@ -63,16 +63,16 @@ function hasInValidInput(inputList) {
 
 
 function isValid(form, input, options) {
-        switch (input.type) {
-            case 'text':
-                regValidEmail(input);
-                console.log('1');
-                break;
-            case 'password':
-                console.log('2');
-                regValidPass(input);
-                break;
-        }
+        // switch (input.type) {
+        //     case 'text':
+        //         regValidEmail(input);
+        //         console.log('1');
+        //         break;
+        //     case 'password':
+        //         console.log('2');
+        //         regValidPass(input);
+        //         break;
+        // }
         // return input.validity.valid;
       //return input.validity.valid == false;
       if (input.validity.valid) {
@@ -107,8 +107,8 @@ obj = {
     formSelector: '.login__form',
     inputSelector: '.login__input',
     checkboxSelector: '.login__checkbox',
-    submitButtonSelector: '.login__btnSubmit',
-    inactiveButtonClass: 'login__btnSubmit_inactive',
+    submitButtonSelector: '.button',
+    inactiveButtonClass: 'button_inactive',
     inputErrorClass: 'login__input_type_error',
     errorClass: 'login__input-error_active'
 }

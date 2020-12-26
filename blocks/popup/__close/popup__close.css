@@ -6,4 +6,5 @@
   cursor: pointer;
   background-color: transparent;
   padding: 0;
+  justify-self: end;
 }

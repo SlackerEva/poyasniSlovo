@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="module" src='/script/InitialLoadSite.js'></script>
-  <script type="module" src='/script/validation/authorization.js'></script>
+  <script type="module" src='./script/InitialLoadSite.js'></script>
+  <script type="module" src='./script/validation/authorization.js'></script>
   <link rel="stylesheet" href="pages/index.css">
   <title>ГосЖалоба</title>
 </head>
 <body class="body">
   <div class="page">      
-
     <footer class="footer">
       <div class="footer__content">
         <nav class="footer__navigation">
@@ -65,7 +64,7 @@
           </ul>
         </nav>
         <div class="menu-place">
-          
+
         </div>
       </main>
     </template>
@@ -89,10 +88,17 @@
         </div>
         <div class="popup__data">
           <p class="popup__message-title"></p>
-          <p class="popup__message-email"><span class="popup__message-email_bold"></span></p>
+          <p class="popup__message-email"><span class="popup__message-email_bold"></span>" "</p>
         </div>
         <p class="popup__message-meaning"></p>
         <button class="button button_position popup__add"></button><!--У кнопок теперь общий стиль -->
+      </div>
+    </template>
+
+    <template id="popup-hint">
+      <div class="popup popup-hint">
+        <button class="popup__close" type="button"></button>
+        <p class="popup-hint__title"></p>
       </div>
     </template>
 

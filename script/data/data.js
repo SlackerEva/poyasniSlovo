@@ -7,6 +7,7 @@ export const objHtmlElements = {
   menuBtnArchive: '.menu__btn_name_archive',
   menuBtnDelete: '.menu__btn_name_delete',
   menuBtnRestore: '.menu__btn_name_restore',
+  menuBtnPrint: '.menu__btn_name_print',
   templaitLetter: '#letter',
   letterContent: '.letter',
   letterTheme: '.letter__theme',
@@ -60,6 +61,16 @@ export const objHtmlElements = {
   dropdown: '.dropdown',
   dropdownActive: 'dropdown_active',
   header: '.header',
+  templatePopupAnswer: '#popup-answer',
+  popupMessageMeaning: '.popup__message-meaning',
+  popupAnswer: '.popup-answer',
+  popupData: '.popup__data',
+  popupMessageTitle: '.popup__message-title',
+  popupMessageEmail: '.popup__message-email',
+  popupMessageEmailBold: '.popup__message-email_bold',
+  templatePopupHint: '#popup-hint',
+  PopupHint: '.popup-hint',
+  popupHintTitle: '.popup-hint__title',
 }
 
 export const initialSenders = [{

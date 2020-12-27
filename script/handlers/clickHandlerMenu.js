@@ -1,4 +1,4 @@
-import { clearAll, renderLetters, poems, getRandInt, mailBox, answer} from '../index.js'
+import { clearAll, renderLetters, poems, getRandInt, mailBox, answer, idSet, renderWords} from '../index.js'
 
 export function clickHandlerMenuBtn(evt, objHtmlElements, letters, deleteLetters, render = renderLetters) {
   const content = document.querySelector(objHtmlElements.content);
@@ -11,6 +11,9 @@ export function clickHandlerMenuBtn(evt, objHtmlElements, letters, deleteLetters
   while(letters.length) {
     if (menuCheckBoxArrayId.includes(letters[index].id)) {
       deleteLetters.push(letters[index]);
+      if(render == renderWords) {
+        idSet.delete(letters[index].id);
+      }
       letters.splice(index, 1);
       index--;
     }

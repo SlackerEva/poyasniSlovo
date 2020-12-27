@@ -28,6 +28,6 @@ export {inputHandlerMenu} from './handlers/inputHandlerMenu.js';
 export {clickHandlerMenuCheckbox, clickHandlerMenuBtn, clickHandlerMenuBtnAnswer, clickHandlerMenuBtnmenuBtnRestore} from './handlers/clickHandlerMenu.js';
 export {clickHandlerFooterMenu} from './handlers/clickHandlerFooterMenu.js';
 export {clickHundlerBtnAnswer} from './handlers/clickHundlerBtnAnswer.js';
-
+export {clickHandlerAvatar} from './handlers/clickHandlerHeader.js';
 
 

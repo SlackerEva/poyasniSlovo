@@ -1,0 +1,32 @@
+.dropdown {
+    display: none;
+    border: 1px solid #9A9A9A;
+    background-color: #fff;
+    width: 152px;
+    height: 196px;
+    position: absolute;
+    left:900px;
+    top: 95px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.dropdown::before, .dropdown::after {
+ content: ''; 
+ position: absolute;
+ left: 64px; 
+ top: -40px;
+ border: 10px solid transparent;
+ border-top: 30px solid #9A9A9A;
+ transform: rotate(180deg);
+}
+.dropdown::after {
+ border-top: 30px solid #ffffff;
+ top: -38px; 
+}

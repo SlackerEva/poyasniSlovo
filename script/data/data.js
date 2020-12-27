@@ -56,6 +56,10 @@ export const objHtmlElements = {
   navigationLinkApplication: '.navigation__link-application',
   templateAnswer: '#answer',
   templateLogIn: '#log-in',
+  avatar: '.avatar',
+  dropdown: '.dropdown',
+  dropdownActive: 'dropdown_active',
+  header: '.header',
 }
 
 export const initialSenders = [{

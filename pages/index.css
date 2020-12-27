@@ -112,5 +112,11 @@
 @import url(../blocks/login/__input-error/login__input-error.css);
 @import url(../blocks/login/__input-error/_active/login__input-error_active.css);
 @import url(../blocks/login/__input/_type_error/login__input_type_error.css);
+@import url(../blocks/login/__input/_allow/login__input_allow.css);
 @import url(../blocks/login/__pass-help/login__pass-help.css);
 @import url(../blocks/login/__pass-help/_active/login__pass-help_active.css);
+
+@import url(../blocks/dropdown/dropdown.css);
+@import url(../blocks/dropdown/__links/dropdown__links.css);
+@import url(../blocks/dropdown/__link/dropdown__link.css);
+@import url(../blocks/dropdown/_active/dropdown_active.css);

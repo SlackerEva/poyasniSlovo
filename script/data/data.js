@@ -67,6 +67,7 @@ export const objHtmlElements = {
   templatePopupHint: '#popup-hint',
   PopupHint: '.popup-hint',
   popupHintTitle: '.popup-hint__title',
+  select: 'select',
 }
 
 export const initialSenders = [{

@@ -1,4 +1,4 @@
-import { clearAll, renderLetters, poems, getRandInt, mailBox, answer, idSet, renderWords} from '../index.js'
+import { clearAll, renderLetters, poems, getRandInt, mailBox, answer, idSet, renderWords, setDictonaryInLocalStorage} from '../index.js'
 
 export function clickHandlerMenuBtn(evt, objHtmlElements, letters, deleteLetters, render = renderLetters) {
   const content = document.querySelector(objHtmlElements.content);
@@ -23,6 +23,7 @@ export function clickHandlerMenuBtn(evt, objHtmlElements, letters, deleteLetters
 
   clearAll(objHtmlElements.content, objHtmlElements.linkContent);
   render(objHtmlElements, letters);
+  setDictonaryInLocalStorage();
 }
 
 export function clickHandlerMenuBtnAnswer(evt, objHtmlElements, letters, deleteLetters, render = renderLetters) {

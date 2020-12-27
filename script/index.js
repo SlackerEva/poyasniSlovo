@@ -6,6 +6,8 @@ export {Word, addWord, idSet} from './word/word.js';
 export {poems, loadPoems} from './api/loadPoems.js';
 export {getSearchListDefineWords, getDefineWikiSite, getDefine} from './api/wikiApi.js';
 export {enableValidation} from './validation/authorization.js';
+export {printMessage, printList} from './api/print.js';
+export {setDictonaryInLocalStorage, getDictonaryInLocalStorage} from './api/localStorageDictonary.js';
 
 export {renderStartPage} from './render/renderStartPage.js';
 export {renderMenu} from './render/renderMenu.js';

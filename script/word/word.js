@@ -1,4 +1,8 @@
-import {dictionary, getRandInt} from '../index.js'
+import {dictionary, getRandInt, getDictonaryInLocalStorage, setDictonaryInLocalStorage} from '../index.js'
+
+if(localStorage.getItem('dictionary') != null) {
+  getDictonaryInLocalStorage();
+} 
 
 export let idSet = new Set();
 
@@ -16,4 +20,5 @@ export function addWord(name, value) {
   }
   idSet.add(id);
   dictionary.push(new Word(id, name, value));
+  setDictonaryInLocalStorage();
 }

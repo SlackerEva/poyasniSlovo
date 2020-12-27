@@ -51,6 +51,8 @@
 @import url(../blocks/popup/__message-email/popup__message-email.css);
 @import url(../blocks/popup/__message-email/_bold/popup__message-email_bold.css);
 
+@import url(../blocks/select/select.css);
+
 @import url(../blocks/popup-hint/popup-hint.css);
 @import url(../blocks/popup-hint/__title/popup-hint__title.css);
 

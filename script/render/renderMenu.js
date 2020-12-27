@@ -1,4 +1,4 @@
-import {clickHundlerBtnAnswer, swapElementRestore, answer, mailBox, inputHandlerMenu, dictionary, renderLetters, renderWords, clickHandlerMenuCheckbox, clickHandlerMenuBtn, deleteMail, archivemail, swapElementArray, clickHandlerMenuBtnAnswer, clickHandlerMenuBtnmenuBtnRestore} from '../index.js'
+import {printMessage, printList, clickHundlerBtnAnswer, swapElementRestore, answer, mailBox, inputHandlerMenu, dictionary, renderLetters, renderWords, clickHandlerMenuCheckbox, clickHandlerMenuBtn, deleteMail, archivemail, swapElementArray, clickHandlerMenuBtnAnswer, clickHandlerMenuBtnmenuBtnRestore} from '../index.js'
 
 export function renderMenu(objHtmlElements, mode = '', id = '') {
   const menuTemplate = document.querySelector(objHtmlElements.templaitMenu).content;
@@ -32,6 +32,10 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
     menuBtnAnswer.addEventListener('click', (evt) => {
       clickHandlerMenuBtnAnswer(evt, objHtmlElements, mailBox, answer);
     });
+
+    menuBtnPrint.addEventListener('click', (evt) => {
+      printList();
+    });
   }
 
   if (mode === objHtmlElements.templaitMessage) {
@@ -54,6 +58,10 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
       menuBtnAnswer.addEventListener('click', (evt) => {
         clickHundlerBtnAnswer(evt, mailBox, id, objHtmlElements);
       });
+
+      menuBtnPrint.addEventListener('click', (evt) => {
+        printMessage();
+      });
     }
 
     if(sidebarLinkActive.classList.contains(objHtmlElements.sidebarLinkArchive.slice(1))) {
@@ -65,6 +73,10 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
 
       menuBtnAnswer.addEventListener('click', (evt) => {
         clickHundlerBtnAnswer(evt, archivemail, id, objHtmlElements);
+      });
+
+      menuBtnPrint.addEventListener('click', (evt) => {
+        printMessage();
       });
     }
 
@@ -98,6 +110,10 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
       menuBtnArchive.addEventListener('click', (evt) => {
         swapElementArray(answer, archivemail, id);
       });
+
+      menuBtnPrint.addEventListener('click', (evt) => {
+        printMessage();
+      });
     }
   }
 
@@ -112,6 +128,10 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
     menuSearch.addEventListener('input', (evt) => {
       inputHandlerMenu(objHtmlElements, dictionary, menuSearch, 'name', renderWords);
     })
+
+    menuBtnPrint.addEventListener('click', (evt) => {
+      printList();
+    });
 
   }
 
@@ -151,6 +171,10 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
       clickHandlerMenuBtn(evt, objHtmlElements, answer, deleteMail);
     });
 
+    menuBtnPrint.addEventListener('click', (evt) => {
+      printList();
+    });
+
     menuBtnAnswer.classList.add(objHtmlElements.menuHide);
   }
 
@@ -167,6 +191,10 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
 
     menuBtnAnswer.addEventListener('click', (evt) => {
       clickHandlerMenuBtnAnswer(evt, objHtmlElements, archivemail, answer);
+    });
+
+    menuBtnPrint.addEventListener('click', (evt) => {
+      printList();
     });
   }
   return menuElement;

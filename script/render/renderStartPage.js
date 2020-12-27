@@ -1,4 +1,4 @@
-import {clickHandlerSidebar, renderMailBox, clearPage, renderErrorPage} from '../index.js'
+import {clickHandlerSidebar, renderMailBox, clearPage, renderErrorPage, clickHandlerAvatar} from '../index.js'
 
 export function renderStartPage(objHtmlElements) {
   const page = document.querySelector(objHtmlElements.page);
@@ -21,6 +21,11 @@ export function renderStartPage(objHtmlElements) {
 
   sidebar.addEventListener('click', (evt) => {
     clickHandlerSidebar(evt, objHtmlElements);
+  });
+  
+  const avatar = headerElement.querySelector(objHtmlElements.avatar);
+  avatar.addEventListener('click', () => {
+    clickHandlerAvatar(objHtmlElements);
   });
 
   clearPage(objHtmlElements);

@@ -32,6 +32,15 @@
             <img class="avatar__foto" src="images/avatar.svg" alt="Аватарка">
             <figcaption class="avatar__caption">Мария Ивановна</figcaption>
           </figure>
+          <div class="dropdown">
+            <nav>
+              <ul class="dropdown__links">
+                <li class="dropdown__link">Документы</li>
+                <li class="dropdown__link">Настройки</li>
+                <li class="dropdown__link">Выход</li>
+              </ul>
+            </nav>
+          </div>
         </div> 
         <nav class="navigation">
           <ul class="navigation__menu">
@@ -323,9 +332,9 @@
         <div class="login">
             <h2 class="login__title">Вход</h2>
             <form name="formAuthorization" class="login__form" novalidate>
-                <input type="text" name="emailorphone" id="login__input_email" class="login__input login__input_email" placeholder="Мобильный телефон или почта" minlength="2" maxlength="21" required>
+                <input type="text" name="emailorphone" id="login__input_email" class="login__input login__input_email" placeholder="Мобильный телефон или почта" required>
                 <span id="login__input_email-error" class="login__input-error"></span>
-                <input type="password" name="password" id="login__input_password" class="login__input login__input_password" placeholder="Пароль" minlength="2" maxlength="21" required>
+                <input type="password" name="password" id="login__input_password" class="login__input login__input_password" placeholder="Пароль" required>
                 <span id="login__input_password-error" class="login__input-error"></span>
                 <label class="login__label">
                     <input type="checkbox" class="login__checkbox">

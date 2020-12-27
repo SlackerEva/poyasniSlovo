@@ -2,7 +2,7 @@ export {objHtmlElements, initialSenders, mailBox, dictionary, deleteMail, archiv
 export {getRandInt} from './api/getRandomInt.js';
 export {swapElementArray, swapElementRestore, swapElementAnswer} from './api/swapElementArray.js';
 export {Letter, initialLetters} from './letter/letter.js';
-export {Word, addWord} from './word/word.js';
+export {Word, addWord, idSet} from './word/word.js';
 export {poems, loadPoems} from './api/loadPoems.js';
 export {getSearchListDefineWords, getDefineWikiSite, getDefine} from './api/wikiApi.js';
 export {enableValidation} from './validation/authorization.js';
@@ -15,7 +15,7 @@ export {renderLetter, renderLetters} from './render/renderLetter.js';
 export {renderWord, renderWords} from './render/renderWord.js';
 export {renderMessage} from './render/renderMessage.js';
 export {clearContent, clearAll, clearPage, setContent} from './render/renderContent.js';
-export {renderPopup, renderPopupAnswer} from './render/renderPopup.js';
+export {renderPopup, renderPopupAnswer, renderPopupHint} from './render/renderPopup.js';
 export {renderPageRule} from './render/renderPageRule.js';
 export {renderPagePrivacyPolicy} from './render/renderPagePrivacyPolicy.js';
 export {renderErrorPage} from './render/renderErrorPage.js';

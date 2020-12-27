@@ -1,4 +1,4 @@
-import { renderMenu, renderPopup, getSearchListDefineWords, getDefineWikiSite, getDefine, renderPopupAnswer, arrayTarget} from '../index.js'
+import { renderMenu, renderPopup, getSearchListDefineWords, getDefineWikiSite, getDefine, renderPopupAnswer, arrayTarget, renderPopupHint} from '../index.js'
 // Сделать рефакторинг
 export function renderMessage(objHtmlElements, letter) {
   const messageTemplate = document.querySelector(objHtmlElements.templaitMessage).content;
@@ -20,12 +20,12 @@ export function renderMessage(objHtmlElements, letter) {
   const popup = popupElement.firstElementChild;
   const popupTitle = popup.querySelector(objHtmlElements.popupTitle);
   const popupMeaning = popup.querySelector(objHtmlElements.popupMeaning);
-  console.log(arrayTarget);
   const PopupAnswerElement = renderPopupAnswer(objHtmlElements, arrayTarget, letter.id);
+  const renderPopupHintElement = renderPopupHint(objHtmlElements);
 
   messageElement.firstElementChild.append(popupElement);
   messageElement.firstElementChild.append(PopupAnswerElement);
-
+  messageElement.firstElementChild.append(renderPopupHintElement);
 
 
   messageInfo.after(menuElement);
@@ -55,8 +55,7 @@ export function renderMessage(objHtmlElements, letter) {
             .then(text => getDefine(text))
             .then(define => {
               popupTitle.textContent = word;
-              define = define.filter((value => value.length > 1))
-              popupMeaning.textContent = define[0] ? define[0] : 'Ops!';
+              popupMeaning.textContent = define ? define : 'Ops!';
               popup.classList.add('popup_opened');
             });
         }

@@ -1,7 +1,8 @@
 # Команда №4 "Поясни за слово"
 App для госсотрудников. Все делают для граждан, а мы для другой стороны...
-\*Ссылка:\* https://slackereva.github.io/poyasniSlovo/
+\*\*Ссылка:\*\* https://slackereva.github.io/poyasniSlovo/
 * * *
+### Информация для входа в App.
 * \*E-mail:\* MIvanova@gosjalobi.ru
 * \*Мобильный телефон:\* 89123123123
 * \*Пароль:\* yandex-praktikum-best

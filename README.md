@@ -1,6 +1,6 @@
 # Команда №4 "Поясни за слово"
 App для госсотрудников. Все делают для граждан, а мы для другой стороны...  
-___Ссылка на проект:___ https://slackereva.github.io/poyasniSlovo/
+___Ссылка на проект:___ https://slackereva.github.io/poyasniSlovo/  
 ___Ссылка на Figma:___ https://www.figma.com/file/zxnYHHp1yuo2XGcdEDSL48/kakaton?node-id=254%3A296
 * * *
 ### Информация для входа в App.

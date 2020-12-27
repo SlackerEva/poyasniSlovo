@@ -1,4 +1,4 @@
-import { renderMenu, renderPopup, getSearchListDefineWords, getDefineWikiSite, getDefine, renderPopupAnswer, arrayTarget, renderPopupHint} from '../index.js'
+import { renderMenu, renderPopup, getSearchListDefineWords, getDefineWikiSite, getDefine, renderPopupAnswer, arrayTarget, renderPopupHint } from '../index.js'
 // Сделать рефакторинг
 export function renderMessage(objHtmlElements, letter) {
   const messageTemplate = document.querySelector(objHtmlElements.templaitMessage).content;
@@ -30,10 +30,47 @@ export function renderMessage(objHtmlElements, letter) {
 
   messageInfo.after(menuElement);
 
-  if("answer" in letter) {
+  if ("answer" in letter) {
     const templateAnswer = document.querySelector(objHtmlElements.templateAnswer).content;
     const answerElement = templateAnswer.cloneNode(true);
-    answerElement.firstElementChild.textContent = letter.answer;
+    const answer = answerElement.firstElementChild;
+    answer.textContent = letter.answer;
+
+    answer.addEventListener('pointerdown', (evt) => {
+      console.log("Pointerdown");
+      let tempBool = true;
+      document.addEventListener('selectionchange', (evt1) => {
+        answer.addEventListener('pointerup', (evt2) => {
+          if (!document.getSelection().isCollapsed && tempBool) {
+            tempBool = false;
+            console.log("Pointerup")
+            let selectWord = document.getSelection().toString().toLowerCase();
+            let word;
+            getSearchListDefineWords(selectWord)
+              .then(searchList => {
+                word = searchList[0].title;
+                return getDefineWikiSite(word);
+              })
+              .then(text => getDefine(text))
+              .then(define => {
+                let selection = document.getSelection();
+                let selection_text = selection.toString();
+                let span = document.createElement('SPAN');
+                span.classList.add(objHtmlElements.select);
+                span.textContent = selection_text;
+                let range = selection.getRangeAt(0);
+                range.deleteContents();
+                range.insertNode(span);
+
+                popupTitle.textContent = word;
+                popupMeaning.textContent = define ? define : 'Ops!';
+                popup.classList.add('popup_opened');
+              });
+          }
+        })
+      })
+    });
+
     messageElement.firstElementChild.append(answerElement);
   }
 
@@ -54,6 +91,15 @@ export function renderMessage(objHtmlElements, letter) {
             })
             .then(text => getDefine(text))
             .then(define => {
+              let selection = document.getSelection();
+              let selection_text = selection.toString();
+              let span = document.createElement('SPAN');
+              span.classList.add(objHtmlElements.select);
+              span.textContent = selection_text;
+              let range = selection.getRangeAt(0);
+              range.deleteContents();
+              range.insertNode(span);
+              
               popupTitle.textContent = word;
               popupMeaning.textContent = define ? define : 'Ops!';
               popup.classList.add('popup_opened');

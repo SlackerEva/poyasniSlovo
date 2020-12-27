@@ -5,9 +5,11 @@ export function renderWord(objHtmlElements, word) {
   const wordElement = wordTemplate.cloneNode(true);
   const wordTitle = wordElement.querySelector(objHtmlElements.wordTitle);
   const wordValue = wordElement.querySelector(objHtmlElements.wordValue);
+  const wordCheckbox = wordElement.querySelector(objHtmlElements.checkboxItem);
 
   wordTitle.textContent = word.name;
   wordValue.textContent = word.value;
+  wordCheckbox.value = word.id;
 
   return wordElement;
 }

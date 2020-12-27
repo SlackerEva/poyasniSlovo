@@ -8,6 +8,8 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
   const menuCheckboxAll = menuElement.querySelector('.checkbox-all');
   const menuBtnArchive = menuElement.querySelector(objHtmlElements.menuBtnArchive);
   const menuBtnAnswer = menuElement.querySelector(objHtmlElements.menuBtnAnswer);
+  const menuBtnPrint = menuElement.querySelector(objHtmlElements.menuBtnPrint);
+  const menuBtnRestore = menuElement.querySelector(objHtmlElements.menuBtnRestore);
 
   menuCheckboxAll.addEventListener('click', (evt) => {
     clickHandlerMenuCheckbox(objHtmlElements, menuCheckboxAll);
@@ -50,7 +52,7 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
       });
 
       menuBtnAnswer.addEventListener('click', (evt) => {
-        clickHundlerBtnAnswer(evt, mailBox, id);
+        clickHundlerBtnAnswer(evt, mailBox, id, objHtmlElements);
       });
     }
 
@@ -62,13 +64,14 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
       });
 
       menuBtnAnswer.addEventListener('click', (evt) => {
-        clickHundlerBtnAnswer(evt, archivemail, id);
+        clickHundlerBtnAnswer(evt, archivemail, id, objHtmlElements);
       });
     }
 
     if(sidebarLinkActive.classList.contains(objHtmlElements.sidebarLinkDelete.slice(1))) {
       const menuBtnRestore = menuElement.querySelector(objHtmlElements.menuBtnRestore);
-
+      menuBtnAnswer.classList.add(objHtmlElements.menuHide);
+      menuBtnPrint.classList.add(objHtmlElements.menuHide);
       menuBtnDelete.classList.add(objHtmlElements.menuHide);
       menuBtnRestore.classList.remove(objHtmlElements.menuHide);
 
@@ -81,7 +84,7 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
       });
 
       menuBtnAnswer.addEventListener('click', (evt) => {
-        clickHundlerBtnAnswer(evt, deleteMail, id);
+        clickHundlerBtnAnswer(evt, deleteMail, id, objHtmlElements);
       });
     }
 
@@ -99,10 +102,12 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
   }
 
   if (mode === objHtmlElements.templaitWord) {
-    const menuBtnAnswer = menuElement.querySelector(objHtmlElements.menuBtnAnswer);
-    const menuBtnArchive = menuElement.querySelector(objHtmlElements.menuBtnArchive);
     menuBtnAnswer.classList.add(objHtmlElements.menuHide);
     menuBtnArchive.classList.add(objHtmlElements.menuHide);
+
+    menuBtnDelete.addEventListener('click', (evt) => {
+      clickHandlerMenuBtn(evt, objHtmlElements, dictionary, [], renderWords);
+    });
 
     menuSearch.addEventListener('input', (evt) => {
       inputHandlerMenu(objHtmlElements, dictionary, menuSearch, 'name', renderWords);
@@ -111,7 +116,8 @@ export function renderMenu(objHtmlElements, mode = '', id = '') {
   }
 
   if (mode === objHtmlElements.sidebarLinkDelete) {
-    const menuBtnRestore = menuElement.querySelector(objHtmlElements.menuBtnRestore);
+    menuBtnAnswer.classList.add(objHtmlElements.menuHide);
+    menuBtnPrint.classList.add(objHtmlElements.menuHide);
     menuBtnDelete.classList.add(objHtmlElements.menuHide);
     menuBtnRestore.classList.remove(objHtmlElements.menuHide);
 

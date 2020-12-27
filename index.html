@@ -33,15 +33,9 @@
             <figcaption class="avatar__caption">Мария Ивановна</figcaption>
           </figure>
           <div class="dropdown">
-            <nav>
-              <ul class="dropdown__links">
-                <li class="dropdown__link">Документы</li>
-                <li class="dropdown__link">Настройки</li>
-                <li class="dropdown__link">Выход</li>
-              </ul>
-            </nav>
+          
           </div>
-        </div> 
+        </div>
         <nav class="navigation">
           <ul class="navigation__menu">
             <li class="navigation__item"><a class="navigation__link navigation__link-application" href="#">Заявления</a></li>
@@ -334,19 +328,36 @@
             <form name="formAuthorization" class="login__form" novalidate>
                 <input type="text" name="emailorphone" id="login__input_email" class="login__input login__input_email" placeholder="Мобильный телефон или почта" required>
                 <span id="login__input_email-error" class="login__input-error"></span>
-                <input type="password" name="password" id="login__input_password" class="login__input login__input_password" placeholder="Пароль" required>
+                <input type="password" pattern="[a-z]{6}\S[a-z]{9}\S[a-z]{4}" name="password" id="login__input_password" class="login__input login__input_password" placeholder="Пароль" required>
                 <span id="login__input_password-error" class="login__input-error"></span>
                 <label class="login__label">
                     <input type="checkbox" class="login__checkbox">
                     <span class="login__label_text">Запомнить логин и пароль</span>
                 </label>
-                <button type="submit" name="open" class="button button_inactive">Войти</button>
+                <button type="submit" name="open" disabled class="button button_inactive">Войти</button>
                 <p class="login__throw-pass">Не помню пароль</p>
                 <p class="login__pass-help">обратитеть к вашему администратору</p>                    
             </form>
         </div>
       </div>
     </template>
+    <template id="dropdown-main-menu">
+        <nav>
+          <ul class="dropdown__links">
+            <li class="dropdown__link dropdown__link-document footer-link__link">Документы</li>
+            <li class="dropdown__link dropdown__link-setting footer-link__link">Настройки</li>
+            <li class="dropdown__link dropdown__link-exit">Выход</li>
+          </ul>
+        </nav>
+    </template>
+    <template id="dropdown-exit">
+      <div class="dropdown__wrap">
+          <h2 class="dropdown__title">Выход</h2>
+          <img class="dropdown__img" src="./images/Canceling.svg">
+      </div>
+      <p class="dropdown__text">Вы точно хотите выйти из профиля?</p>
+      <button class="button">Подтвердить</button>
+  </template>
   </div>
 </body>
 </html>

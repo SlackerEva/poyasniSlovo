@@ -1,5 +1,4 @@
 export function getSearchListDefineWords(selectWord) {
-  console.log('Функция поиска заголовков');
   let url = 'https://ru.wiktionary.org/w/api.php?action=query&list=search&format=json&origin=*&srsearch=' + selectWord;
   return new Promise((resolve) => fetch(url)
                                             .then(response => response.json())
@@ -7,7 +6,6 @@ export function getSearchListDefineWords(selectWord) {
 }
 
 export function getDefineWikiSite(title) {
-  console.log('Функция текст страницы толкования слова');
   let url = 'https://ru.wiktionary.org/w/api.php?action=query&prop=extracts&origin=*&format=json&titles=' + title;
   return new Promise((resolve) => fetch(url)
                   .then(response => response.json())

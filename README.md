@@ -1,11 +1,15 @@
 # Команда №4 "Поясни за слово"
 App для госсотрудников. Все делают для граждан, а мы для другой стороны...  
-___Ссылка:___ https://slackereva.github.io/poyasniSlovo/
+___Ссылка на проект:___ https://slackereva.github.io/poyasniSlovo/
+___Ссылка на Figma:___ https://www.figma.com/file/zxnYHHp1yuo2XGcdEDSL48/kakaton?node-id=254%3A296
 * * *
 ### Информация для входа в App.
 * ___E-mail:___ MIvanova@gosjalobi.ru
 * ___Мобильный телефон:___ 89123123123
 * ___Пароль:___ yandex-praktikum-best
+* * *
+#### Используемые технологии:  
+Java Script, HTML, CSS, БЭМ методолгоия, файловая струткура Nest, Local Storage, API.
 * * *
 #### Исполнители:
 ___Дизайнеры:___ Диана Маничкина, София Санникова.  

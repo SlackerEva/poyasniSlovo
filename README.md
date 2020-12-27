@@ -3,6 +3,9 @@ App для госсотрудников. Все делают для гражда
 ___Ссылка на проект:___ https://slackereva.github.io/poyasniSlovo/  
 ___Ссылка на Figma:___ https://www.figma.com/file/zxnYHHp1yuo2XGcdEDSL48/kakaton?node-id=254%3A296
 * * *
+### Как запустить App:  
+* Основная часть проекта лежит в ветке newDevelop запустить проект можно по ссылке из Readme.md.
+* * *
 ### Информация для входа в App.
 * ___E-mail:___ MIvanova@gosjalobi.ru
 * ___Мобильный телефон:___ 89123123123

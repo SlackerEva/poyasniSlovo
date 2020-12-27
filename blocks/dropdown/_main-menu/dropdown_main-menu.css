@@ -1,0 +1,20 @@
+.dropdown_main-menu {
+    width: 152px; 
+    height: 196px; 
+    position: absolute;
+    left:900px; 
+}
+
+.dropdown_main-menu::before, .dropdown_main-menu::after {
+ content: ''; 
+ position: absolute;
+ left: 64px; 
+ top: -40px;
+ border: 10px solid transparent;
+ border-top: 30px solid #9A9A9A;
+ transform: rotate(180deg);
+}
+.dropdown_main-menu::after {
+ border-top: 30px solid #ffffff;
+ top: -38px; 
+}

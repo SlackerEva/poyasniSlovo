@@ -19,11 +19,11 @@ function setEventListeners(form, options) {
     const inputList = Array.from(form.querySelectorAll(options.inputSelector));
     const checkbox = form.querySelector(options.checkboxSelector);
     const buttonElement = form.querySelector(options.submitButtonSelector);
-    toggleButtonState(inputList, buttonElement, options);
+    // toggleButtonState(inputList, buttonElement, options);
     inputList.forEach(function(input) {
         input.addEventListener('input', function() {
-            isValid(form, input, options);
-            toggleButtonState(inputList, buttonElement, options);
+            isValid({form, input, options, buttonElement, inputList});
+            // toggleButtonState(inputList, buttonElement, options);
         });
     });
     checkbox.addEventListener('change', function() {
@@ -33,7 +33,8 @@ function setEventListeners(form, options) {
     });
 };
 
-function toggleButtonState(inputList, buttonElement, options) {
+function toggleButtonState(data) {
+    const { options, inputList, buttonElement } = data;
     if (hasInValidInput(inputList)) {
         buttonElement.classList.add(options.inactiveButtonClass);
         buttonElement.setAttribute('disabled', true);
@@ -43,19 +44,19 @@ function toggleButtonState(inputList, buttonElement, options) {
         }
 };
 
-function ValidEmail(form, input, options) {
+function ValidEmail(form, input, options, buttonElement) {
     if(email === input.value || phone === input.value) {
         hideInputError(form, input, options);
     } else {
-        showInputError(form, input, options);
+        showInputError(form, input, options, buttonElement);
     }
 }
 
-function ValidPass(form, input, options) {
+function ValidPass(form, input, options, buttonElement) {
     if(password === input.value) {
         hideInputError(form, input, options);
     } else {
-        showInputError(form, input, options);
+        showInputError(form, input, options, buttonElement);
     }
 }
 
@@ -65,22 +66,27 @@ function hasInValidInput(inputList) {
     })
 };
 
-function isValid(form, input, options) {
+function isValid(data) {
+    const { form, input, options, buttonElement } = data
         switch (input.type) {
             case 'text':
-                ValidEmail(form, input, options);
+                ValidEmail(form, input, options, buttonElement);
                 break;
             case 'password':
-                ValidPass(form, input, options);
+                ValidPass(form, input, options, buttonElement);
                 break;
         }
+    
+    toggleButtonState(data);
 };
 
-function showInputError(formElement, input, options) {
+function showInputError(formElement, input, options, buttonElement) {
     const formError = formElement.querySelector(`#${input.id}-error`);
     input.classList.remove(options.inputAllow);
     input.classList.add(options.inputErrorClass);
     formError.classList.add(options.errorClass);
+    buttonElement.classList.add(options.inactiveButtonClass);
+    buttonElement.setAttribute('disabled', true);
     if(input.value == ''){
         formError.textContent = 'Необходимо заполнить данное поле';
     } else if(formError.id === 'login__input_email-error') {

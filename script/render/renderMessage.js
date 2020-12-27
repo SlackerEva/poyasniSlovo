@@ -37,13 +37,11 @@ export function renderMessage(objHtmlElements, letter) {
     answer.textContent = letter.answer;
 
     answer.addEventListener('pointerdown', (evt) => {
-      console.log("Pointerdown");
       let tempBool = true;
       document.addEventListener('selectionchange', (evt1) => {
         answer.addEventListener('pointerup', (evt2) => {
           if (!document.getSelection().isCollapsed && tempBool) {
             tempBool = false;
-            console.log("Pointerup")
             let selectWord = document.getSelection().toString().toLowerCase();
             let word;
             getSearchListDefineWords(selectWord)
@@ -75,13 +73,11 @@ export function renderMessage(objHtmlElements, letter) {
   }
 
   messageText.addEventListener('pointerdown', (evt) => {
-    console.log("Pointerdown");
     let tempBool = true;
     document.addEventListener('selectionchange', (evt1) => {
       messageText.addEventListener('pointerup', (evt2) => {
         if (!document.getSelection().isCollapsed && tempBool) {
           tempBool = false;
-          console.log("Pointerup")
           let selectWord = document.getSelection().toString().toLowerCase();
           let word;
           getSearchListDefineWords(selectWord)

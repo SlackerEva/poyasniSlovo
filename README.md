@@ -5,7 +5,7 @@ ___Ссылка на Figma:___ https://www.figma.com/file/zxnYHHp1yuo2XGcdEDSL48
 * * *
 ### Как запустить App:  
 * Основная часть проекта лежит в ветке newDevelop запустить проект можно по ссылке из Readme.md.  
-####Локальная версия:
+#### Локальная версия:
 * Скачать плагин для VSC Live Server и установить.
 * Кликнуть правой кнопкой мыши по index.html, выбрать команду "Open with Live Server"
 * * *

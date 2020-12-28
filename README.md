@@ -9,6 +9,7 @@ App для госсотрудников. Все делают для гражда
 * видит значение  
 * добавляет слово в словарь  
 * после чего может посмотреть это слово в словаре, если он его забыл   
+  
 ___Ссылка на проект:___ https://slackereva.github.io/poyasniSlovo/  
 ___Ссылка на Figma:___ https://www.figma.com/file/zxnYHHp1yuo2XGcdEDSL48/kakaton?node-id=254%3A296
 * * *

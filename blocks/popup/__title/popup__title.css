@@ -1,0 +1,10 @@
+.popup__title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 0;
+  color: #3B3B3B
+  /*text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;*/
+}

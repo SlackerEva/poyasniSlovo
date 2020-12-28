@@ -1,0 +1,11 @@
+.login__throw-pass {
+    width: 101px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+    color: #1D6CC7;
+    margin: 0 auto;
+    cursor: pointer;
+}

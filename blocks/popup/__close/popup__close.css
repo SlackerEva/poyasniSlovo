@@ -1,0 +1,10 @@
+.popup__close {
+  width: 34px;
+  height: 34px;
+  background-image: url(../../../images/card-define/Canceling.svg);
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  justify-self: end;
+}

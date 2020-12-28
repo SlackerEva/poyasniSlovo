@@ -3,11 +3,11 @@
   padding-bottom: 36px;
 }
 
-.sidebar__item:nth-child(3n) {
+.sidebar__item:nth-child(4n) {
   border-bottom: 1px solid #9a9a9a;
 }
 
-.sidebar__item:nth-child(4n) {
+.sidebar__item:nth-child(5n) {
   padding-top: 36px;
 }
 
